@@ -1,0 +1,2 @@
+<!--pages/testWebView/testWebView.wxml-->
+ <web-view src='https://p.weiyunzuo.com'></web-view> 

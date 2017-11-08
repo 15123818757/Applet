@@ -1,0 +1,86 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="content">
+<!-- 富文本 -->
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+  <!-- 相关产品 -->
+  <view class="product">
+    <view class="redTitle">
+      <view></view>
+      <text>相关产品</text>
+      <view></view>
+    </view>
+    <!-- 可滚动视图 -->
+     <scroll-view class="scroll" scroll-x="true">
+      <view class="proBox" bindtap="product">
+        <image src="../img/img6.jpg"></image>
+        <view>原味珍珠面</view>
+      </view>
+      <view class="proBox">
+        <image src="../img/img7.jpg"></image>
+        <view>猪肝红枣营养米粉</view>
+      </view>
+      <view class="proBox">
+        <image src="../img/img8.jpg"></image>
+        <view>淮山山药莲子营养米粉</view>
+      </view>
+      <view class="proBox">
+        <image src="../img/img6.jpg"></image>
+        <view>原味珍珠面</view>
+      </view>
+    </scroll-view> 
+  </view>
+  <!-- 评论 -->
+  <view class="pingL">
+    <view class="redTitle">
+      <view></view>
+      <text>评论</text>
+      <view></view>
+    </view>
+    <view class="plBox">
+      <image src="../img/userLogo.jpg"></image>
+      <view>
+        <text>张三</text>
+        <text>按照上面的步骤做出来的东西还不错，挺好吃！</text>
+      </view>
+      <text>2017年8月29日</text>
+    </view>
+    <view class="plBox">
+      <image src="../img/userLogo.jpg"></image>
+      <view>
+        <text>李四</text>
+        <text>按照上面的步骤做出来的东西还不错，挺好吃按照上面的步骤做出来的东西还不错，挺好吃！</text>
+      </view>
+      <text>2017年8月29日</text>
+    </view>
+    <text>加载更多</text>
+  </view>
+</view>
+
+<!-- 评论框 -->
+<view class="bigPL" style="display:{{PLDis}}" bindtap="hidePL">
+  <view>
+    <textarea catchtap="text" placeholder="请输入评论内容" placeholder-class="pClass"  /> 
+    <text catchtap="sub">提交</text>
+  </view>
+</view>
+
+
+<view class="hideView"></view>
+<!-- 底部 -->
+<view class="buttom">
+  <view bindtap="collect">
+    <image src="{{cImg}}"></image>
+    <text>{{cText}}</text>
+  </view>
+  <view bindtap="showPL">
+    <image src="../img/d_icon2.png"></image>
+    <text>评论</text>
+  </view>
+  <view>
+    <image src="../img/d_icon3.png"></image>
+    <text>分享</text>
+    <button open-type="share"></button>
+  </view>
+</view>

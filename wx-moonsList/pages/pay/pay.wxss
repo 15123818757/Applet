@@ -1,0 +1,49 @@
+/* pages/pay/pay.wxss */
+page{background: white;}
+.box{
+  width: 90%;
+  box-sizing: border-box;
+  margin: 8% auto;
+  box-shadow: 0 0 10px lightgray;
+  padding: 3% 0;
+  text-align: left;
+}
+.box image{display:block;margin: 3%;}
+.box image:nth-of-type(1){width: 100px;height: 28px;}
+.box image:nth-of-type(2){width: 30px;height: 30px;
+position: absolute;
+top: -5%;
+right: 3%;margin: 0;}
+.box>view{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.box>view:nth-of-type(3){text-align: center;}
+.box>view:nth-of-type(3) text{
+    display: inline-block;
+    vertical-align: middle;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9b9b9b;
+  margin-top: 14px;
+}
+.box>view:nth-of-type(3) image{
+    display: inline-block;
+    vertical-align: top;
+    width: 22px;
+    height: 22px;
+    margin-left: 0%;
+    margin-top: 3.5%;
+}
+.box>view:nth-of-type(2) image:nth-of-type(1){
+    width: 75px;
+}
+button{
+  display: block;
+  color: white;
+  width: 90%;
+  font-size: 0.9rem;
+  background: #ed5249;
+  margin: 5% auto;
+}

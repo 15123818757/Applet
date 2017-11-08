@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class='content'>
+    <image src='../img/logo.jpg'></image>
+    <view class='box'>
+        <image src='../img/userName.png'></image>
+        <input placeholder='请输入账号' placeholder-class='pClass'></input>
+    </view>
+    <view class='box'>
+        <image src='../img/userPwd.png'></image>
+        <input password='true' placeholder='请输入密码' placeholder-class='pClass'></input>
+    </view>
+    <button class='login' bindtap='login'>登录</button>
+</view>
+

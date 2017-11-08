@@ -1,0 +1,63 @@
+/**index.wxss**/
+.search{background: #33d688;padding: 4% 3%;}
+.search>view{
+  background: white;
+  position: relative;
+  height: 40px;
+}
+.search>view input{
+  display: block; 
+  width: 90%;
+  outline: none;
+  border: none;
+  background: white;
+  line-height: 40px;
+  color: #434343;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  padding-left: 3%;
+  font-family: "微软雅黑";
+  height: 40px;
+}
+.pClass{font-size: 0.9rem;color: #c3c3c3;font-family: "微软雅黑";line-height: 40px;}
+.search>view image{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  z-index: 10;
+}
+.box{background: white;padding-bottom: 5%;}
+.box>image{display: block;width: 360px;margin: auto;height: 200px;}
+.box>text{padding: 0 3%;text-align: left;}
+.box>text:nth-of-type(1){
+  color: #353535;
+  font-size:1rem;
+  line-height: 2.2rem;
+  display: block;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.box>text:nth-of-type(2){
+  color: #999999;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  display: block;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+ @media only screen and (max-width:325px){
+    .box>image{width: 320px;height: 177px;}
+} 
+
+@media only screen and (min-width:375px) and (max-width:500px){
+  .box>image{width: 100%;height: 205px;}
+}

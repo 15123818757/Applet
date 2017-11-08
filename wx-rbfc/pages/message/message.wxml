@@ -1,0 +1,22 @@
+<!--pages/message/message.wxml-->
+<view class="header"><image bindtap="goBack" src="../../img/back.png"></image>在线留言</view>
+
+<!-- 表单 -->
+<form bindsubmit="formBindsubmit" bindreset="formReset" report-submit="true">
+  <text>姓名</text>
+  <input type="text" name="name" value="{{name}}" placeholder="请输入您的名字" />
+  <text>电话</text>
+  <input type="number" name="tel" value="{{phone}}" placeholder="请输入您的电话" />
+  <text>留言内容</text>
+  <textarea placeholder="请输入内容" name="text" />
+
+  <view style="height:40px"></view>
+  <button class="sub" formType="submit">提交信息</button>  
+</form>
+<!-- 收藏 -->
+<view class="box" style="display:{{collDis}}">
+  <view style="top:{{c_ViewTop}}">
+    <text>{{tips}}</text>
+    <text bindtap="hideColl">确定</text>
+  </view>
+</view>

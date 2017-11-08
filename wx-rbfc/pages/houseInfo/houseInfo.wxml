@@ -1,0 +1,89 @@
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots="true" autoplay="true" duration="1000">
+  <swiper-item wx:for="{{bannerDt}}" wx:for-item="img"><image src="https://jphouse.wechatapp.net{{img}}"></image></swiper-item>
+
+</swiper>
+
+
+<!-- 内容 -->
+<view class="hoseBox">
+  <!-- 房子标题 -->
+  <text class="houseTitle">{{all.title}}{{all.title2}}</text>
+  <!-- 信息 -->
+  <view class="info top">
+    <view>房屋信息</view>
+    <view><text>售价：</text><text>{{all.jiage}}万日元 (约{{all.jiage_rmb}}万人民币)</text></view>
+    <view><text>交通：</text><text>{{all.jiaotong}}</text></view>
+    <view><text>地址</text><text>{{all.address1}}</text></view>
+    <view><text>面积：</text><text>{{all.mianji}}㎡</text></view>
+    <view><text>建筑结构：</text><text>{{all.jiegou}}</text></view>
+    <view><text>所在层：</text><text>{{all.louceng}}</text></view>
+    <view><text>户型：</text><text>{{all.dd}}</text></view>
+    <view><text>总户数：</text><text>{{all.hushu}}户</text></view>
+    <view><text>竣工时间：</text><text>{{all.shijian}}</text></view>
+    <view><text>管理费：</text><text>{{all.guanli_money}}日元/月（约{{all.guanli_rmb}}人民币/月）</text></view>
+    <view><text>维修基金：</text><text>{{all.weixiu_money}}日元/月（约{{all.weixiu_rmb}}人民币/月）</text></view>
+    <view><text>现况：</text><text>{{all.zhuangkuang}}</text></view>
+      <view><text>回报率：</text><text>{{all.huibaolv}}</text></view>
+  </view>
+  <!-- 位置 -->
+  <view class="info">
+    <view>房屋位置</view>
+    <view>
+      <text>{{all.address2}}</text>
+
+    </view>
+  </view>
+   <!-- 周边 -->
+    <view class="info">
+      <view>房屋周边</view>
+      <view>
+        <text>{{all.zhoubian}}</text>
+  
+      </view>
+  </view>
+
+</view>
+
+<view style="height:40px;"></view>
+<!-- 底部 -->
+<view bindtap="botClick" class="footer">咨询房源</view>
+
+<!-- 咨询块 -->
+<view class="zxView" style="display:{{zxViewDis}}" bindtap="zxClick" >
+  <view>
+      <view bindtap="call">电话咨询</view>
+      <view data-id="{{all.tid}}" bindtap="showMessage">在线留言</view>
+      <view catchtap="showEr">微信专家</view>
+      <view bindtap="goMeeting">参加相谈会</view>
+      <view><button open-type="share">分享转发</button></view>
+      <view bindtap="showColl">收藏</view>
+  </view>
+</view>
+
+
+<!-- 二维码 -->
+<view class="er" style="display:{{erDis}}">
+  <view>
+      <view>
+         <image src="https://jphouse.wechatapp.net/{{jichu.logo}}"></image>
+      </view>
+      <view>
+         <text>{{jichu.chenghao}}（{{jichu.name}}）</text>
+        <image src="../../img/topLogo2.jpg"></image>
+         <text>{{jichu.guojia}}</text>
+      </view>
+  </view>
+  <image src="https://jphouse.wechatapp.net/{{jichu.erweima}}"></image>
+  <text>微信账号：{{jichu.weixinhao}}</text>
+  <text>（请截取屏幕二维码，扫描并关注）</text>
+  <view><image bindtap="closeEr" src="../../img/close.png"></image></view>
+</view>
+
+<!-- 收藏 -->
+<view class="box" style="display:{{collDis}}">
+  <view style="top:{{c_ViewTop}}">
+    <text>收藏成功</text>
+    <text bindtap="hideColl">确定</text>
+  </view>
+</view>

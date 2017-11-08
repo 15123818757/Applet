@@ -1,0 +1,160 @@
+<!--pages/index/index.wxml-->
+<!-- 头部 -->
+<form bindsubmit="EventHandle">
+<view class="header">
+
+<input type="text" name="like" placeholder="输入关键词" placeholder-style="font-family:'微软雅黑';font-siza:'0.7rem';" />
+ 
+  <button plain="true" id="sub" form-type="submit">
+
+				</button>
+   <image src="../../img/search.png"></image>
+
+   
+</view>
+</form>
+<!-- 身子 -->
+<view class="content">
+    <!-- 选项 -->
+    <view class="selectBox">
+        <view bindtap="navClick" data-index="1"><view>{{city}}</view><view></view></view>
+        <view bindtap="navClick" data-index="2"><view>{{price}}</view><view></view></view>
+        <view bindtap="navClick" data-index="3"><view>{{backGet}}</view><view></view></view>
+        <view bindtap="navClick" data-index="4"><view>{{more}}</view><view></view></view>
+    </view>
+   <!-- 房源信息 -->
+   <view class="citiBigBox">
+       <view wx:for="{{fangDt}}" wx:for-item="dt" class="cityBox">
+          <image src="https://jphouse.wechatapp.net/{{dt.logo}}"></image>
+          <view bindtap="goHouseInfo" data-tidd="{{dt.id}}">
+     <text>{{dt.title}}</text>
+                <text>{{dt.title2}}</text>
+               <view>
+                    <text>{{dt.huxing}}</text>
+                <text>{{dt.mianji}}㎡ </text>
+                </view>
+                <text>{{dt.jiage}}万日元</text>
+           </view>
+                     <view data-id="{{dt.id}}" bindtap="botClick">咨询房源</view>
+      </view>
+      
+     
+      <!-- 点击加载更多按钮 -->
+      <text bindtap="loadClick">{{loadZi}}</text>
+      
+   </view>
+
+</view>
+
+ <!-- 面积的选项 -->
+    <view class="city_select" style="display:{{selectDis1}}" bindtap="BoxClose">
+        <view>
+            <view bindtap="citySelectClick" data-id="0" data-value="不限">不限</view>
+            <view wx:for="{{mianDt}}" wx:for-item="mian" bindtap="citySelectClick" data-id="{{mian.id}}" data-value="{{mian.mianji}}㎡">{{mian.mianji}}㎡</view>
+
+        </view>   
+    </view>
+
+<!-- 总价 -->
+<view class="city_select" style="display:{{selectDis2}}" bindtap="BoxClose">
+        <view>
+            <view bindtap="priceSelectClick" data-id="0" data-value="不限">不限</view>
+
+             <view wx:for="{{zongjia}}" wx:for-item="zong" bindtap="priceSelectClick" data-id="{{zong.id}}" data-value="{{zong.zongjia}}万日元">{{zong.zongjia}}万日元</view>
+          
+        </view>   
+    </view>
+
+<!-- 回报率 -->        
+<view class="city_select" style="display:{{selectDis3}}" bindtap="BoxClose">
+        <view>
+            <view bindtap="backSelectClick" data-id="0"data-value="不限">不限</view>
+
+            <view wx:for="{{huibaolv}}" wx:for-item="hui" bindtap="backSelectClick" data-id="{{hui.id}}" data-value="{{hui.huibaolv}}%">{{hui.huibaolv}}%</view>
+        </view>   
+    </view>
+
+<!-- 更多 -->
+<view class="city_select more" style="display:{{selectDis4}}" bindtap="BoxClose">
+  <view>
+          <view>
+            <view data-index="1" catchtap="mClick" data-value="地区">地区</view>
+            <view data-index="2" catchtap="mClick" data-value="户型">户型</view>
+            <view data-index="3" catchtap="mClick" data-value="类型">类型</view>
+            <view data-index="4" catchtap="mClick" data-value="状况">状况</view>
+            <view data-index="5" catchtap="mClick" data-value="时间">时间</view>
+        </view>   
+        <!-- 地区 -->
+        <view style="display:{{mPlaceDis}}">
+    <view bindtap="choseMore" data-id="0" bindtap="diqu"  data-value="不限">不限</view>
+         <view bindtap="choseMore" bindtap="diqu"  wx:for="{{diqu}}" wx:for-item="i" data-id="{{i.id}}"  data-value="{{i.address}}">{{i.address}}</view>
+        </view>
+        <!-- 户型 -->
+
+        <view style="display:{{mHDis}}">
+        <view bindtap="choseMore" bindtap="hxclick" data-id="0" data-value="不限">不限</view>
+            <view wx:for="{{huxing}}"  wx:for-item="i" bindtap="choseMore" bindtap="hxclick" data-id="{{i.id}}" data-value="{{i.huxing}}">{{i.huxing}}</view>
+        </view>
+        <!-- 类型 -->
+        <view style="display:{{mLeiDis}}">
+            <view bindtap="choseMore" data-id="0" bindtap="typeclick" data-value="不限">不限</view>
+            <view bindtap="choseMore" wx:for="{{fangtype}}" wx:for-item="i" bindtap="typeclick" data-id="{{i.id}}"data-value="{{i.fwtype}}">{{i.fwtype}}</view>
+           
+        </view>
+        <!-- 状况 -->
+        <view style="display:{{mZKDis}}">
+            <view bindtap="choseMore" bindtap="zkclick" data-id="0" data-value="不限">不限</view>
+            <view bindtap="choseMore" data-id="-1"
+            bindtap="zkclick" data-value="空置">空置</view>
+            <view bindtap="choseMore"
+            bindtap="zkclick"
+             data-id="1" data-value="租赁中">租赁中</view>
+        </view>
+        <!-- 时间 -->
+        <view style="display:{{mTimeDis}}">
+            <view bindtap="choseMore" bindtap="jgclick" data-id="0" data-value="不限">不限</view>
+             <view bindtap="choseMore" wx:for="{{jg}}" wx:for-item="i" bindtap="jgclick" data-id="{{i.id}}" data-value="{{i.jungongtime}}">{{i.jungongtime}}</view>
+        </view>
+  </view>
+    
+    </view>
+
+
+
+
+<!-- 咨询块 -->
+<view class="zxView" style="display:{{zxViewDis}}" bindtap="zxClick" >
+  <view>
+      <view bindtap="call">电话咨询</view>
+      <view bindtap="showMessage">在线留言</view>
+      <view catchtap="showEr">微信专家</view>
+      <view bindtap="goMeeting">参加相谈会</view>
+      <!--<view><button open-type="share">分享转发</button></view>-->
+      <view bindtap="sc">收藏</view>
+  </view>
+</view>
+
+<!-- 二维码 -->
+<view class="er" style="display:{{erDis}}">
+  <view>
+      <view>
+         <image src="https://jphouse.wechatapp.net/{{jichu.logo}}"></image>
+      </view>
+      <view>
+         <text>{{jichu.chenghao}}（{{jichu.name}}）</text>
+        <image src="../../img/topLogo2.jpg"></image>
+         <text>{{jichu.guojia}}</text>
+      </view>
+  </view>
+  <image src="https://jphouse.wechatapp.net/{{jichu.erweima}}"></image>
+  <text>微信账号：{{jichu.weixinhao}}</text>
+  <text>（请截取屏幕二维码，扫描并关注）</text>
+  <view><image bindtap="closeEr" src="../../img/close.png"></image></view>
+</view>
+<!-- 收藏 -->
+<view class="box" style="display:{{collDis}}">
+  <view style="top:{{c_ViewTop}}">
+    <text>收藏成功</text>
+    <text bindtap="hideColl">确定</text>
+  </view>
+</view>

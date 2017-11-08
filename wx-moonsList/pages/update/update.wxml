@@ -1,0 +1,8 @@
+<!--pages/update/update.wxml-->
+<text>原密码</text>
+<input type='password' placeholder='请输入原密码' placeholder-class='pClass'></input>
+<text>请输入新密码</text>
+<input type='password' placeholder='请输入新密码' placeholder-class='pClass'></input>
+<text>请再次输入新密码</text>
+<input type='password' placeholder='请再次输入新密码' placeholder-class='pClass'></input>
+<button bindtap='makeSure'>确定</button>

@@ -1,0 +1,75 @@
+/* pages/clo_detail/clo_detail.wxss */
+.banner{background: white;height: 396px;}
+.banner image{display: block;margin: auto;width: 300px;height: 396px;}
+.info{background: white;text-align: left;padding: 3%;box-sizing: border-box;}
+.info>text{color: #666666;font-size: 0.8rem;line-height: 20px;}
+.info>view{margin: 1% 0;}
+.info>view text{color: #fcac09;margin-right: 10%;line-height: 20px;font-size: 0.9rem;font-weight: bold;}
+.option{border-top: 1px solid #e5e5e5;border-bottom: 1px solid #e5e5e5;box-sizing: border-box;padding: 3%;background: white;margin-top: 0%;padding-bottom: 0;}
+.option>view{border-bottom: 1px solid #e5e5e5;box-sizing: border-box;}
+.option>view:last-child{border-bottom: 0;}
+.box{position: relative;padding: 5% 0;box-sizing: border-box;}
+.box>view:nth-of-type(1){
+  position: absolute;
+  left: 0;
+  top: 40%;
+  color: #666666;
+  text-align: left;
+}
+.box>view:nth-of-type(2){margin-left: 15%;}
+.box>view view{
+  border: 1px solid #d9d9d9;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  color: black;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 3% 3% 0;
+}
+.size>view view{
+  width: 100px;
+  line-height: 40px;
+}
+.activeColor{border:1px solid #5aa4ff !important;}
+.num>view view{
+  width: 30px;
+  line-height: 30px;
+  background: #f0f0f2;
+  border: none;
+}
+.num>view view:nth-of-type(1){top: 30%;}
+.num>view view:nth-of-type(2){background: none;}
+.detail{margin: 3% 0;background: white;}
+.detail>text{
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  color: #666666;
+}
+.detail>text image{width: 11px;height: 17px;transform: rotateZ(90deg);}
+.detail>image{
+  display: block;
+  margin: auto;
+  width: 330px;
+  height: 435px;
+  padding: 3% 0;
+}
+
+.buy{text-align: center;position: fixed;bottom: 0;left: 0;width: 100%;background: #f0f0f2;}
+.buy button{width: 40%;display: inline-block;color: white;font-size: 0.8rem;margin: 3%;}
+.buy button:nth-of-type(1){background: #fcac09;}
+.buy button:nth-of-type(2){background: #ed5249;}
+
+@media only screen and (min-width: 365px) and (max-width: 420px) {
+  .banner{height: 448px;}
+  .banner image{width: 340px;height:448px;}
+  .size>view view{width: 130px;}
+}
+
+@media only screen and (min-width: 100px) and (max-width: 355px) {
+  .detail>image{width: 300px;height:396px;}
+  .banner{height: 369px;}
+  .banner image{width: 280px;height:369px;}
+}

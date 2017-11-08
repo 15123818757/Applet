@@ -1,0 +1,52 @@
+<!--pages/gift/gift.wxml-->
+<view class="top">
+  <view>
+    <text>张三</text>
+    <text>当前积分余额：0</text>
+  </view>
+  <!-- <image src="../img/jifenTop.jpg"></image> -->
+</view>
+<!-- 内容 -->
+<view class="content">
+  <text>积分明细</text>
+  <view>
+    <view class="box">
+      <view>
+        <text>日期</text>
+        <text>来源</text>
+        <text>积分明细</text>
+      </view>
+      <view>
+        <text>2017-08-28</text>
+        <text>微信小程序</text>
+        <text>-50</text>
+      </view>
+      <view>
+        <text>2017-08-28</text>
+        <text>微信小程序</text>
+        <text>-50</text>
+      </view>
+      <view>
+        <text>2017-08-22</text>
+        <text>微信小程序</text>
+        <text>20</text>
+      </view>
+      <view>
+        <text>2017-08-22</text>
+        <text>微信小程序</text>
+        <text>20</text>
+      </view>
+      <view>
+        <text>2017-08-22</text>
+        <text>微信小程序</text>
+        <text>20</text>
+      </view>
+      <view>
+        <text>2017-08-22</text>
+        <text>微信小程序</text>
+        <text>20</text>
+      </view>
+      <text>加载更多</text>
+    </view>
+  </view>
+</view>

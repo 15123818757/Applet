@@ -1,0 +1,84 @@
+<!--pages/clothes/clothes.wxml-->
+<view>
+  <!-- 左边导航 -->
+  <view class="left">
+    <text bindtap="clo_1" class="{{class_1}}">女装</text>
+    <text bindtap="clo_2" class="{{class_2}}">男装</text>
+    <text bindtap="clo_3" class="{{class_3}}">女孩</text>
+    <text bindtap="clo_4" class="{{class_4}}">男孩</text>
+    <text bindtap="clo_5" class="{{class_5}}">女幼</text>
+    <text bindtap="clo_6" class="{{class_6}}">男幼</text>
+    <text bindtap="clo_7" class="{{class_7}}">女婴</text>
+    <text bindtap="clo_8" class="{{class_8}}">男婴</text>
+    <text bindtap="clo_9" class="{{class_9}}">孕妇</text>
+  </view>
+  <!-- 右边信息 -->
+  <view class="right">
+    <view class="box">
+      <text>热销推荐</text>
+      <view>
+        <view bindtap="goChose">
+          <image src="../img/clothes_1.jpg"></image>
+          <text>微标系列</text>
+        </view>
+        <view>
+          <image src="../img/clothes_2.jpg"></image>
+          <text>GapFit运动装</text>
+        </view>
+        <view>
+          <image src="../img/clothes_3.jpg"></image>
+          <text>新品上市</text>
+        </view>
+        <view>
+          <image src="../img/clothes_4.jpg"></image>
+          <text>Sale</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="box">
+      <text>上装</text>
+      <view>
+        <view>
+          <image src="../img/clothes_1.jpg"></image>
+          <text>微标系列</text>
+        </view>
+        <view>
+          <image src="../img/clothes_2.jpg"></image>
+          <text>GapFit运动装</text>
+        </view>
+        <view>
+          <image src="../img/clothes_3.jpg"></image>
+          <text>新品上市</text>
+        </view>
+        <view>
+          <image src="../img/clothes_4.jpg"></image>
+          <text>Sale</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="box">
+      <text>下装</text>
+      <view>
+        <view>
+          <image src="../img/clothes_1.jpg"></image>
+          <text>微标系列</text>
+        </view>
+        <view>
+          <image src="../img/clothes_2.jpg"></image>
+          <text>GapFit运动装</text>
+        </view>
+        <view>
+          <image src="../img/clothes_3.jpg"></image>
+          <text>新品上市</text>
+        </view>
+        <view>
+          <image src="../img/clothes_4.jpg"></image>
+          <text>Sale</text>
+        </view>
+      </view>
+    </view>    
+
+  </view>
+</view>

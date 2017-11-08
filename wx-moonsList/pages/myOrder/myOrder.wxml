@@ -1,0 +1,175 @@
+<!--pages/myOrder/myOrder.wxml-->
+<!-- 导航 -->
+<view class="nav">
+  <view bindtap="show_1">全部</view>
+  <view bindtap="show_2">未付款</view>
+  <view bindtap="show_3">配送中</view>
+  <view bindtap="show_4">已完成</view>
+  <view bindtap="show_5">待发货</view>
+  <view style="left:{{left}}"><text></text></view>  
+</view>
+
+<!-- 显示的内容 -->
+<view class="content">
+  <!-- 购买商品信息 -->
+  <!-- <view>
+    <view class="peisong">
+      <text>订单编号:200135226</text>
+      <text class='wuliuText' bindtap='showWL'>查看物流</text>
+      <view></view>
+    </view>
+    <view class="goodsInfo">
+      <view>
+        <image src="../img/cartImg1.jpg"></image>
+        <view class="info">
+          <text>GatFit舒适背部挖剪适背部挖剪适背部挖剪适背部挖剪适背部挖剪直筒背心</text>
+          <view>
+            <text>￥96.30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view>
+    <view class="peisong">
+      <text>订单编号:200135226</text>
+      <text>已完成</text>
+      <view></view>
+    </view>
+    <view class="goodsInfo">
+      <view>
+        <image src="../img/cartImg1.jpg"></image>
+        <view class="info">
+          <text>GatFit舒适背部挖剪直筒背心</text>
+          <view>
+            <text>￥96.30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+  <checkbox-group class="goodsGrop" bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{items}}" wx:key="key">
+        <view>
+          <view class="peisong">
+            <checkbox bindtap="checkMy" data-index="{{item.name[0]}}" color="#fcb01d" value="{{item.name}}" checked="{{item.checked}}" />
+            <text>订单编号:{{item.name[1]}}</text>
+            <text>{{item.name[2]}}</text>
+            <view></view>
+          </view>
+          <view class="goodsInfo">
+
+
+            <view wx:for="{{item.name[3]}}" wx:for-item="goods" wx:key="1">
+              <image src="{{goods.src}}"></image>
+              <view class="info">
+                <text>{{goods.name}}</text>
+                <view>
+                  <text>￥{{goods.price}}</text>
+                </view>
+              </view>
+            </view>
+
+
+          </view>
+        </view>
+        <view class='singlEnd'>
+            <text>共{{item.name[5]}}件商品  实付金额</text>
+            <text>￥{{item.name[4]}}</text>
+        </view>
+      </label>
+    </checkbox-group>
+
+
+  <text>加载更多</text>
+</view>
+
+
+<view class="hideBox"></view>
+
+<!-- 底部结算 -->
+<view class="bottom">
+  <checkbox-group bindchange="checkAll">
+    <checkbox checked="{{checkAll}}" color="#fcb01d" />全选
+  </checkbox-group>
+  <view>
+    <view>合计:<text>￥{{allPrice}}</text></view>
+    <view bindtap="clear">结算</view>
+  </view>
+</view>
+
+<!-- 合并支付 -->
+<view class="pay" style="display:{{payDis}}" bindtap="hidePay">
+  <view class="payBox" catchtap="cat">
+    <view>
+      <text>满100减30</text>
+      <text>已满足</text>
+    </view>
+    <view>
+      <view>
+       <checkbox-group bindchange="checkPrice">
+          <checkbox checked="{{checkPrice}}" color="#fcb01d" />积分抵扣
+        </checkbox-group>
+      </view>
+      <text>已减价{{cPrice}}元</text>
+    </view>
+    <!-- 总价 -->
+    <view class="tPrice">
+      <view>总价：<text>￥{{tPrice}}</text></view>
+      <view>（运费：<text>+￥10</text>优惠金额：<text>-￥38.7</text>）</view>
+    </view>
+    <!-- 支付按钮 -->
+    <button catchtap='pay'>合并支付</button>
+  </view>
+</view>
+
+
+<!-- 物流信息 -->
+<view class='wlBox' style='display:{{wlDis}}'>
+    <view class='wl'>
+        <image src='../img/close.png' bindtap='hideWl'></image>
+        <view class='wxTop'>      
+            <image src='../img/indexImg1.jpg'></image>
+            <view>
+                <text>ARMANI男士手表</text>
+                <text>运单号：QX900354942</text>
+                <text>目的地：上海市 普陀区</text>
+                <text>状态：运转中</text>
+            </view>
+        </view>
+        <view class='wxTab'>
+                <view>
+                    <text>日期</text>
+                    <text>服务地点</text>
+                    <text>详细内容</text>
+                </view>
+                <view>
+                    <view>
+                        <text>2017-08-31</text>
+                        <text>09:18</text>
+                    </view>
+                    <text>重庆</text>
+                    <text>包裹进入重庆操作中心</text>
+                </view>
+                <view>
+                    <view>
+                        <text>2017-09-1</text>
+                        <text>07:00</text>
+                    </view>
+                    <text>武汉</text>
+                    <text>运输中</text>
+                </view>
+                <view>
+                    <view>
+                        <text>2017-09-1</text>
+                        <text>08:24</text>
+                    </view>
+                    <text>上海</text>
+                    <text>运输中</text>
+                </view>
+        </view>
+        <text>暂无更多数据</text>
+    </view>
+</view>

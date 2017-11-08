@@ -1,0 +1,57 @@
+<!--pages/jiesuan/jiesuan.wxml-->
+<!-- 地址 -->
+<view class="address" bindtap="goMyaddress">
+  <view>
+    <text>{{name}}</text>
+    <text>{{tel}}</text>
+  </view>
+  <text>{{address}}</text>
+  <image src="../img/go.jpg"></image>
+</view>
+<!-- 购买商品信息 -->
+<view class="box">
+    <view class="goodsInfo">
+      <view>
+        <image src="../img/cartImg1.jpg"></image>
+        <view class="info">
+          <text>GatFit舒适背部挖剪直筒背心</text>
+          <view>
+            <text>价格：</text>
+            <text>￥96.30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+<view class="box">
+    <view class="goodsInfo">
+      <view>
+        <image src="../img/cartImg1.jpg"></image>
+        <view class="info">
+          <text>GatFit舒适背部挖剪直筒背心</text>
+          <view>
+            <text>价格：</text>
+            <text>￥96.30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+<view class="box">
+    <view class="goodsInfo">
+      <view>
+        <image src="../img/cartImg1.jpg"></image>
+        <view class="info">
+          <text>GatFit舒适背部挖剪直筒背心</text>
+          <view>
+            <text>价格：</text>
+            <text>￥96.30</text>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+<!-- 按钮 -->
+<button hover-class="hover-class" bindtap="goOrder">立即下单</button>

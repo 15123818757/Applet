@@ -1,0 +1,35 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.6.4",
+	"appid": "wxa82f8f1a6d3907a4",
+	"projectname": "moonsList",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": 0,
+					"name": "test",
+					"pathName": "pages/clo_chose/clo_chose",
+					"query": ""
+				}
+			]
+		}
+	}
+}

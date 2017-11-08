@@ -1,0 +1,99 @@
+/* pages/user/user.wxss */
+.lookSC{
+  line-height: 40px;
+  box-sizing: border-box;
+  text-align: left;
+  padding-right: 5%;
+  color: white;
+  background: #a7ccfa;
+  padding-left: 5%;
+}
+.p_class{
+  font-family: "微软雅黑";
+  font-size: 1rem;
+  color: #9a9a9a;
+}
+.content{
+  box-sizing: border-box;
+  padding: 3% 5%;
+  background: white;
+}
+.content>text{
+  text-align: left;
+  display: block;
+  color: #9a9a9a;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+.content>view{
+  height: 46px;
+  box-sizing: border-box;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  position: relative;
+  margin: 3% 0;
+}
+.content>view image:nth-of-type(1){
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+}
+.content>view image:nth-of-type(2){
+  position: absolute;
+  right: 5%;
+  top:15px;
+  width: 10px;
+  height:  16px;
+}
+.content>view view{
+  display: block;
+  padding-left: 45px;
+  line-height: 46px;
+  font-size: 1rem;
+  color: #9a9a9a;
+  text-align: left;
+}
+.content>view view view{padding-left: 0;}
+.content>view input{
+  padding-left: 45px;
+  box-sizing: border-box;
+  display: block;
+  font-family: "微软雅黑";
+  width: 100%;
+  outline: none;
+  font-size:1rem;
+  border: none;
+  height: 46px;
+  line-height: 46px;
+  color: #9a9a9a;
+}
+.sub{
+  background: #ec5248;
+  color: white;
+  font-size: 0.9rem;
+  margin: auto;
+  margin-top: 5%;
+}
+.shouce{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  padding: 5%;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.shouce text{
+  text-align: left;
+  color: black;
+  font-size: 0.8rem;
+  margin-bottom: 5%;
+  display: block;
+}
+.shouce text:nth-of-type(1){font-size: 1rem;}
+.shouce button{background: #1aac19;color: white;margin-top: 5%;}

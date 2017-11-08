@@ -1,0 +1,55 @@
+/* pages/clo_chose/clo_chose.wxss */
+.content{padding: 3%;background: white;}
+.content>view:nth-of-type(2n){margin-right: 0 !important;margin-left: 3%;}
+.box{
+  width: 44%;
+  margin-right: 3%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  margin-bottom: 5%;
+}
+.box>image{
+  display: inline-block;
+  width: 160px;
+  height: 200px;
+}
+.box>text{
+  font-size: 0.9rem;
+  color: #666666;
+  display: block;
+  min-height: 50px;
+  line-height: 25px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.box>view{text-align: left;line-height: 20px;}
+.box>view text:nth-of-type(1){font-weight: bold;color: #fcac09;}
+.box>view text:nth-of-type(2){float: right;color: #999999;text-decoration: line-through;}
+.box>view:last-child{color: #ff0000;font-size: 0.8rem;text-align: left;}
+.content{text-align: center;}
+.content>text{
+  display: inline-block;
+  text-align: center;
+  color: black;
+  padding: 2% 4%;
+  border-radius: 3px;
+  border: 1px solid lightgray;
+  background: white;
+  margin-bottom: 3%;
+}
+
+
+
+@media only screen and (min-width: 365px) and (max-width: 420px) {
+  .box>text {font-size: 0.9rem;}
+} 
+
+ @media only screen and (min-width: 100px) and (max-width: 355px) {
+   .box>image{width: 132px;height: 165px;}
+  .box>text {line-height: 20px;min-height: 40px;}
+}  

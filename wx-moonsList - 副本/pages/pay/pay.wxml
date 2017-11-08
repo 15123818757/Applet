@@ -1,0 +1,16 @@
+<!--pages/pay/pay.wxml-->
+<view class='box'>
+    <image src='../img/wx_top.jpg'></image>
+    <image src='{{wxImg}}'></image>
+    <image bindtap='downWx' src='../img/downWx.png'></image>
+    <text>（点击下载按钮可将二维码保存至手机）</text>
+</view>
+<!-- 支付宝 -->
+<view class='box'>
+    <image src='../img/zfb_top.jpg'></image>
+    <image src='{{zfbImg}}'></image>
+    <image bindtap='downZfb' src='../img/downZfb.png'></image>
+    <text>（点击下载按钮可将二维码保存至手机）</text>
+</view>
+<!-- 按钮 -->
+<button bindtap='go'>上传支付凭证</button>

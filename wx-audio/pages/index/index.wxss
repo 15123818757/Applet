@@ -1,0 +1,8 @@
+/**index.wxss**/
+.title{
+  display: block;
+  width: 100%;
+  text-align: center;
+  line-height: 35px;
+  font-family: "微软雅黑";
+}

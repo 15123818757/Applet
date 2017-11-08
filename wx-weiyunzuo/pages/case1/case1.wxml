@@ -1,0 +1,47 @@
+<!--pages/case1/case1.wxml-->
+<image 
+    class="back" 
+    bindtap="back"
+    src="http://139.199.166.102/images/case/caseDel.png">
+</image> 
+<view class="cc">
+<view class="cTop">
+    <image
+    style="width:{{logoImgWid}}px;height:{{logoImgHei}}px;"
+    bindload="loadLogoImg"
+     src="https://p.weiyunzuo.com{{logo}}"></image>
+    <text>{{title}}</text>
+    <text>{{content}}</text>
+</view>
+
+<view class="cBlockImg" >
+    <image 
+    style="width:{{ImgWid_1}}px;height:{{ImgHei_1}}px;"
+    bindload="imageLoad_1"
+     src="https://p.weiyunzuo.com{{img_data}}"></image>   
+
+</view>
+<view class="cBlockImg2">
+ 
+   <image wx:for="{{img_data2}}
+    style="width:{{ImgWid_2}}px; height:{{ImgHei_2}}px;"
+    bindload="imageLoad_2"
+    src="https://p.weiyunzuo.com{{item}}">
+</image>
+
+
+</view>
+<view class="cBlockImg2">
+ 
+   <image wx:for="{{img_data3}}
+    style="width:{{ImgWid_3}}px; height:{{ImgHei_3}}px;"
+    bindload="imageLoad_3"
+    src="https://p.weiyunzuo.com{{item}}">
+</image>
+
+
+</view>
+
+
+
+</view> 

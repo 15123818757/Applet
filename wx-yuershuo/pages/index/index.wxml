@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<!-- 搜索 -->
+<view class="search">
+  <view>
+    <input type="text" placeholder="搜索文章" placeholder-class="pClass" />
+    <image bindtap="result" src="../img/search.png"></image>
+  </view>
+</view>
+<!-- 菜单 -->
+<view class="content">
+  <view class="box" bindtap="detail">
+    <image src="../img/indexImg1.jpg"></image>
+    <text>新生儿阶段：视觉发展的敏感期</text>
+    <text>因为它，去年我的潮汕之旅，竟然抱憾而归，因为它，去年我的潮汕之旅，竟然抱憾而归，因为它，去年我的潮汕之旅因为它，去年我的潮汕之旅，竟然抱憾而归，因为它，去年我的潮汕之旅，竟然抱憾而归，因为它，去年我的潮汕之旅</text>
+  </view>
+  <view class="box">
+    <image src="../img/indexImg2.jpg"></image>
+    <text>培养宝贝爱心的五条建议</text>
+    <text>每天补充维生素C才是王道！按照这种吃法nice！每天补充维生素C才是王道！按照这种吃法nice！每天补充维生素C才.....每天补充维生素C才是王道！按照这种吃法nice！每天补充维生素C才是王道！按照这种吃法nice！每天补充维生素C才</text>
+  </view>
+   <view class="box">
+    <image src="../img/indexImg3.jpg"></image>
+    <text>如何养育快乐孩子！</text>
+    <text>今天小明起床大喊一声：“我要吃糕点。”但是并没有他快气哭了，呃呃呃，要咋办？</text>
+  </view>
+</view>

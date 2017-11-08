@@ -1,0 +1,35 @@
+<!--pages/cart/cart.wxml-->
+<view class="cart">
+  <view class="cartBox">
+    <checkbox-group class="goodsGrop" bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{items}}" wx:key="key">
+        <checkbox bindtap="checkMy" data-index="{{item.name[0]}}" color="black" value="{{item.name}}" checked="{{item.checked}}" />
+        <image class="goodImg" src="{{item.name[1]}}"></image>
+        <view class="goodsInfo">
+          <text>{{item.name[2]}}</text>
+          <text>{{item.name[3]}}</text>
+          <text>￥{{item.name[4]}}</text>
+        </view>
+        <view class="changeNum">
+          <label catchtap="jian" data-index="{{item.name[0]}}" data-num="{{item.name[5]}}" >-</label>
+          <label>{{item.name[5]}}</label>
+          <label catchtap="jia" data-index="{{item.name[0]}}" data-num="{{item.name[5]}}">+</label>
+        </view>
+      </label>
+    </checkbox-group>
+    <text>加载更多</text>
+  </view>
+</view>
+
+<view class="hideBox"></view>
+
+<!-- 底部结算 -->
+<view class="bottom">
+  <checkbox-group bindchange="checkAll">
+    <checkbox checked="{{checkAll}}" />全选
+  </checkbox-group>
+  <view>
+    <view>合计:<text>￥{{allPrice}}</text></view>
+    <view bindtap="clear">下一步</view>
+  </view>
+</view>

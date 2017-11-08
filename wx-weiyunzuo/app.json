@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/case1/case1",
+    "pages/testWebView/testWebView"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "微运作",
+    "navigationBarTextStyle":"white"
+  }
+}

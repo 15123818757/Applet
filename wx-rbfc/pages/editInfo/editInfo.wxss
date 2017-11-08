@@ -1,0 +1,135 @@
+/* pages/editInfo/editInfo.wxss */
+.header{
+  font-family: "微软雅黑";
+  text-align: center;
+  line-height: 46px;
+  font-size: 0.9rem;
+  color: #353535;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+.header image{
+  position: absolute;
+  left: 3%;
+  top: 16px;
+  width: 10px;
+  height: 15px;
+}
+form{
+  display: block;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  box-sizing: border-box;
+}
+form text{
+  display: block;
+  font-family: "微软雅黑";
+  line-height: 46px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #353535;
+}
+form input{
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  font-size: 0.9rem;
+  color: #888888;
+  outline: none;
+  border: 1px solid #888888;
+  font-family: "微软雅黑";
+}
+radio-group{
+  font-size: 0.9rem;
+  font-family: "微软雅黑";
+  color: #888888;
+  line-height: 40px;
+}
+
+radio:nth-of-type(1){
+  margin-right: 10px;
+}
+radio:nth-of-type(2){
+    margin-left: 15px;
+    margin-right: 10px;
+}
+.sub{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-radius: 0;
+  display: block;
+  width: 100%;
+  line-height: 40px;
+  background: #327ceb;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 0.8rem;
+  color: white;
+  font-family: "微软雅黑";
+}
+
+.box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0,0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+.box>view{
+  position: absolute;
+  top: 45%;
+  width: 35%;
+  transition: 0.5s;
+  left: 35%;
+  background: white;
+  border-radius: 5px;
+}
+.box>view text{
+  display: block;
+  line-height: 30px;
+  font-family: "微软雅黑";
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+
+}
+.box>view text:nth-of-type(2){
+  border-top: 1px solid lightgray;
+}
+.box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0,0.5);
+  z-index: 99;
+  top: 0;
+  left: 0;
+}
+.box>view{
+  position: absolute;
+  top: 45%;
+  width: 35%;
+  transition: 0.5s;
+  left: 35%;
+  background: white;
+  border-radius: 5px;
+}
+.box>view text{
+  display: block;
+  line-height: 30px;
+  font-family: "微软雅黑";
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+
+}
+.box>view text:nth-of-type(2){
+  border-top: 1px solid lightgray;
+}

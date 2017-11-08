@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<text class="title">音频、视频测试</text>
+<!-- 音乐 -->
+<audio poster="{{poster}}" bindtimeupdate="funtimeupdate" name="{{name}}" author="{{author}}" src="{{src}}"  id="myAudio" controls loop></audio>
+
+<button type="primary" bindtap="audioPlay">播放</button>
+<button type="primary" bindtap="audioPause">暂停</button>
+<button type="primary" bindtap="audio14">设置当前播放时间为58秒</button>
+<button type="primary" bindtap="audioStart">回到开头</button>
+<view>{{num1}}</view>
+<view>{{num2}}</view>

@@ -1,0 +1,256 @@
+<!--pages/onlineShop/onlineShop.wxml-->
+<!-- 记载中 -->
+<!-- <text class='loading'>加载中...</text> -->
+<!-- 头部图片 -->
+<view class="search">
+  <view>
+     <input type="text" placeholder="搜索您喜欢的商品" placeholder-class="pClass" /> 
+    <image src="../img/search.png"></image>
+  </view>
+</view>
+<!-- banner -->
+<swiper class="banner" autoplay="true" indicator-dots="true">
+  <block>
+    <swiper-item>
+      <image src="../img/banner.jpg"></image>
+    </swiper-item>
+     <swiper-item>
+      <image src="../img/banner.jpg"></image>
+    </swiper-item>
+     <swiper-item>
+      <image src="../img/banner.jpg"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 导航 -->
+<view class="nav">
+  <view bindtap="goShop">
+    <image src="../img/icon1.png"></image>
+    <text>商品分类</text>
+  </view>
+  <view bindtap="goCart">
+    <image src="../img/icon2.png"></image>
+    <text>购物车</text>
+  </view>
+  <view bindtap="goMyOrder">
+    <image src="../img/icon3.png"></image>
+    <text>订单查询</text>
+  </view>
+  <view bindtap="goUser">
+    <image src="../img/icon4.png"></image>
+    <text>会员中心</text>
+  </view>
+</view>
+<!-- 内容 -->
+<scroll-view class="content" scroll-y = true >
+  <!-- 推荐 -->
+  <view class="box">
+    <view class="boxTile"><text>今日推荐</text><view></view></view>
+    <!-- 可滚动视图 -->
+     <scroll-view class="scroll" scroll-x="true">
+      <view class="goodsBox" bindtap="goClo">
+        <view>
+          <image src="../img/indexImg1.jpg"></image>
+          <view>
+            <image src="../img/indexImg2.jpg"></image>
+            <image src="../img/indexImg3.jpg"></image>
+          </view>
+        </view>
+        <text>ARMANI男士手表</text>
+        <view>
+          <text>AR1981</text>
+          <text>￥9300</text>
+        </view>
+      </view>
+       <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg1.jpg"></image>
+          <view>
+            <image src="../img/indexImg2.jpg"></image>
+            <image src="../img/indexImg3.jpg"></image>
+          </view>
+        </view>
+        <text>ARMANI男士手表</text>
+        <view>
+          <text>AR1981</text>
+          <text>￥9300</text>
+        </view>
+      </view>
+       <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg1.jpg"></image>
+          <view>
+            <image src="../img/indexImg2.jpg"></image>
+            <image src="../img/indexImg3.jpg"></image>
+          </view>
+        </view>
+        <text>ARMANI男士手表</text>
+        <view>
+          <text>AR1981</text>
+          <text>￥9300</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 箱包 -->
+  <view class="box">
+    <view class="boxTile"><text>箱包</text><view></view></view>
+    <!-- 可滚动视图 -->
+     <scroll-view class="scroll" scroll-x="true">
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg4.jpg"></image>
+          <view>
+            <image src="../img/indexImg5.jpg"></image>
+            <image src="../img/indexImg6.jpg"></image>
+          </view>
+        </view>
+        <text>Samsonite万向轮拉杆箱</text>
+        <view>
+          <text>美版 新秀丽</text>
+          <text>￥2479</text>
+        </view>
+      </view>
+       <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg4.jpg"></image>
+          <view>
+            <image src="../img/indexImg5.jpg"></image>
+            <image src="../img/indexImg6.jpg"></image>
+          </view>
+        </view>
+        <text>Samsonite万向轮拉杆箱</text>
+        <view>
+          <text>美版 新秀丽</text>
+          <text>￥2479</text>
+        </view>
+      </view>
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg4.jpg"></image>
+          <view>
+            <image src="../img/indexImg5.jpg"></image>
+            <image src="../img/indexImg6.jpg"></image>
+          </view>
+        </view>
+        <text>Samsonite万向轮拉杆箱</text>
+        <view>
+          <text>美版 新秀丽</text>
+          <text>￥2479</text>
+        </view>
+      </view>
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg4.jpg"></image>
+          <view>
+            <image src="../img/indexImg5.jpg"></image>
+            <image src="../img/indexImg6.jpg"></image>
+          </view>
+        </view>
+        <text>Samsonite万向轮拉杆箱</text>
+        <view>
+          <text>美版 新秀丽</text>
+          <text>￥2479</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 服装 -->
+  <view class="box">
+    <view class="boxTile"><text>服装</text><view></view></view>
+    <!-- 可滚动视图 -->
+     <scroll-view class="scroll" scroll-x="true">
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg7.jpg"></image>
+          <view>
+            <image src="../img/indexImg2.jpg"></image>
+            <image src="../img/indexImg3.jpg"></image>
+          </view>
+        </view>
+        <text>adidas BB4977</text>
+        <view>
+          <text>阿迪达斯经典短袖</text>
+          <text>￥764</text>
+        </view>
+      </view>
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg7.jpg"></image>
+          <view>
+            <image src="../img/indexImg2.jpg"></image>
+            <image src="../img/indexImg3.jpg"></image>
+          </view>
+        </view>
+        <text>adidas BB4977</text>
+        <view>
+          <text>阿迪达斯经典短袖</text>
+          <text>￥764</text>
+        </view>
+      </view>
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg7.jpg"></image>
+          <view>
+            <image src="../img/indexImg2.jpg"></image>
+            <image src="../img/indexImg3.jpg"></image>
+          </view>
+        </view>
+        <text>adidas BB4977</text>
+        <view>
+          <text>阿迪达斯经典短袖</text>
+          <text>￥764</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+   <!-- 化妆品 -->
+  <view class="box">
+    <view class="boxTile"><text>化妆品</text><view></view></view>
+    <!-- 可滚动视图 -->
+     <scroll-view class="scroll" scroll-x="true">
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg10.jpg"></image>
+          <view>
+            <image src="../img/indexImg11.jpg"></image>
+            <image src="../img/indexImg12.jpg"></image>
+          </view>
+        </view>
+        <text>Chanel女士香水</text>
+        <view>
+          <text>粉红色柔情邂逅EDT50ml</text>
+          <text>￥860</text>
+        </view>
+      </view>
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg10.jpg"></image>
+          <view>
+            <image src="../img/indexImg11.jpg"></image>
+            <image src="../img/indexImg12.jpg"></image>
+          </view>
+        </view>
+        <text>Chanel女士香水</text>
+        <view>
+          <text>粉红色柔情邂逅EDT50ml</text>
+          <text>￥860</text>
+        </view>
+      </view>
+      <view class="goodsBox">
+        <view>
+          <image src="../img/indexImg10.jpg"></image>
+          <view>
+            <image src="../img/indexImg11.jpg"></image>
+            <image src="../img/indexImg12.jpg"></image>
+          </view>
+        </view>
+        <text>Chanel女士香水</text>
+        <view>
+          <text>粉红色柔情邂逅EDT50ml</text>
+          <text>￥860</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</scroll-view>

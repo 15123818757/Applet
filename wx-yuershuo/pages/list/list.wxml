@@ -1,0 +1,26 @@
+<!--pages/list/list.wxml-->
+<view class="content">
+  <view class="box" bindtap="goDetail">
+    <image src="../img/img1.jpg"></image>
+    <view>
+      <text>新生儿阶段：视觉发展的黄金敏感期</text>
+      <text>早教对象不只是婴幼儿，更是对其父母的教育； 2.早教的目的不是提前学习知识，而是身体、情感、智力、人格、精神全面成长的教育；3.教育内容不只是学写字，读英语，学画画钢琴，开发智力只是早教的一部分； 4.教育方式不是灌输式，对话与互动才是早教的本质。</text>
+      <view>
+        <image src="../img/pao.png"></image>12
+        <image src="../img/heart.png"></image>19
+      </view>
+    </view>
+  </view>
+  <view class="box">
+    <image src="../img/img2.jpg"></image>
+    <view>
+      <text>如何养育快乐孩子！</text>
+      <text>1岁以内的小宝宝平躺在床上睡觉时，会摆出像青蛙一样的姿势，这是宝宝最自然的休息姿势。有妈妈担心宝宝将来长成“罗圈腿”，总想把宝宝的胳膊腿拉直。于是把宝宝的腿、胳膊都拉直了包上。其实这样做会使宝宝一直处于僵直状态，浑身紧张疲劳，休息不好，反而影响生长发育。</text>
+      <view>
+        <image src="../img/pao.png"></image>12
+        <image src="../img/heart.png"></image>19
+      </view>
+    </view>
+  </view>
+  <text>加载更多</text>
+</view>

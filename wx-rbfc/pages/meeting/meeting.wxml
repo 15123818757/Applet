@@ -1,0 +1,26 @@
+
+<import src="../../wxParse/wxParse.wxml"/> 
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<view class="content middle">
+  <text class="red">{{all.riqi1}}/{{all.riqi2}}  {{all.title}}</text>
+  <text class="red">{{all.time1}}  {{all.time2}}</text>
+  <text class="red">{{all.address}}</text>
+  <view>
+    <view bindtap="goSignUp">在线报名</view>
+    <button open-type="share">分享转发</button>
+  </view>
+</view>
+
+<view class="wxParse">
+    <template is="wxParse" data="{{wxParseData:article2.nodes}}"/>
+</view>
+
+<view bindtap="goSignUp" class="signUp">在线报名</view>
+<button class="share" open-type="share">分享转发</button>
+
+
+
+
+

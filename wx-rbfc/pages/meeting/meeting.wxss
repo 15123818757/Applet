@@ -1,0 +1,76 @@
+/* pages/meeting/meeting.wxss */
+text{
+  font-family: "微软雅黑";
+  font-size: 1rem;
+  display: block;
+  padding: 2% 3%;
+  box-sizing: border-box;
+  line-height: 25px;
+}
+.header{
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+image{
+  display: block;
+  width: 94%;
+  margin: 10px auto;
+}
+.content{
+  border-bottom: 1px solid #e5e5e5;
+}
+.blue{
+  color: #327ceb;
+}
+text text{
+  padding: 0;
+  display: inline;
+}
+.red{
+  color: #ff6565;
+  text-align: center;
+  line-height: 26px;
+}
+.middle{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.middle>view{
+  text-align: center;
+}
+.middle>view view,.middle>view button{
+  display: inline-block;
+  padding: 0 10px;
+  line-height: 30px;
+  color: white;
+  font-size: 0.8rem;
+  font-family: "微软雅黑";
+  margin: 5px 10px;
+  background: #22ac38;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  overflow: auto;
+}
+
+
+
+.signUp,.share{
+  display: block;
+  width: 94%;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  font-size: 0.8rem;
+  font-family: "微软雅黑";
+  margin: 10px auto;
+  background: #22ac38;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  overflow: auto;
+}
+.middle>view view,.signUp{
+  background: #327ceb;
+}
+@import "/wxParse/wxParse.wxss";

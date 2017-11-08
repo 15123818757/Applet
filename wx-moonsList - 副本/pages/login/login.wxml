@@ -1,0 +1,51 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+  <image class="top" src="../img/img3.png"></image>
+  <view class="out">
+    <view class="mid">
+      <text>激活立享会员特权</text>
+      <text bindtap="showHy_detail">会员卡详情></text>
+    </view>
+    <view class="inp">
+      <text>必填信息</text>
+      <view>
+        <text>姓名</text>
+        <input type="text" placeholder="请输入您的姓名" placeholder-style="font-size:0.9rem;" />
+      </view>
+      <view>
+        <text>手机</text>
+        <input type="number" placeholder="请输入您的手机号" placeholder-style="font-size:0.9rem;" />
+      </view>
+    </view>
+    <view class="check">
+      <checkbox-group bindchange="checkboxChange">
+        <label class="checkbox" wx:for="{{items}}">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" style="transform: scale(.7);" />
+        </label>
+      </checkbox-group>
+      <text bindtap="showHySM_detail">我已阅读并同意<text>会员卡信息使用声明</text></text>
+    </view>
+    <button class="btn" bindtap="sub">提交</button>
+  </view>
+</view>
+
+<!-- 会员卡详情 -->
+<view class="hy_detail" style="display:{{hy_detail}}">
+  <text>会员卡详情</text>
+  <view>
+    <text>特权说明<text>测试</text></text>
+    <text>有效日期<text>永久有效</text></text>
+    <text bindtap="call">电<text class="kong"></text>话<text class="phone" >023-888888</text></text>
+    <text>使用须知<text>测试使用</text></text>
+    <button class="back" bindtap="hideHy_detail">返回</button>
+  </view>
+</view>
+
+<!-- 会员卡说明 -->
+<view class="hy_shuoMing" style="display:{{hySM_detail}}">
+  <text>会员卡信息使用说明</text>
+  <text>点击"立即激活“,即代表你同意腾讯收集、使用你提交的信息,将上述信息转交给制发本张会员卡的公账号主体用于相关会员服务,并同意财付通。点击"立即激活“,即代表你同意腾讯收集、使用你提交的信息,将上述信息转交给制发本张会员卡的公账号主体用于相关会员服务,并同意财付通。点击"立即激活“,即代表你同意腾讯收集、使用你提交的信息,将上述信息转交给制发本张会员卡的公账号主体用于相关会员服务,并同意财</text>
+  <text>如果你不希望向不希望向不希望向不希望向不希望向不希望向不希望向不希望向</text>
+  <text>如果你不希望向不希望向不希望向不希望向不希望向不希望向不希望向不希望向</text>
+  <button class="back" bindtap="hideHySM_detail">返回并继续开卡</button>
+</view>

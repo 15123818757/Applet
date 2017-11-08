@@ -1,0 +1,24 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index_2/index_2",
+    "pages/login/login",
+    "pages/cart/cart",
+    "pages/jiesuan/jiesuan",
+    "pages/order/order",
+    "pages/myOrder/myOrder",
+    "pages/user/user",
+    "pages/clothes/clothes",
+    "pages/clo_chose/clo_chose",
+    "pages/clo_detail/clo_detail",
+    "pages/gift/gift",
+    "pages/pay/pay",
+    "pages/add/add"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "会员中心",
+    "navigationBarTextStyle":"black"
+  }
+}

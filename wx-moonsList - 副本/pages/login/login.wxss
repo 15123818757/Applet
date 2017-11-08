@@ -1,0 +1,109 @@
+/* pages/login/login.wxss */
+page{background: white;}
+checkbox-group{display: inline-block;}
+.content{padding: 0 3%;}
+.top{
+  display: block;
+  width: 100%;
+  height: 80px;
+  margin-top: 3%;
+}
+.out{
+  border-radius: 5px;
+  margin-top: 5%;
+  overflow: hidden;
+}
+.mid{
+  background: #fafafa;
+  padding: 5% 0;
+  text-align: center;
+  border-bottom: 1px dashed #e7e7e7;
+  box-sizing: border-box;
+}
+.mid text{line-height: 1.2rem;color: #8b8b8b;display: block;text-align: center;}
+.mid text:nth-of-type(2){color: #4573c0;}
+.inp{padding: 5%;background: white;padding-bottom: 0;}
+.inp>text{color: #8b8b8b;line-height: 40px;}
+.inp>view{
+  position: relative;
+  height: 40px;
+  border-top: 1px solid #f0f0f0;
+  box-sizing: border-box;
+}
+.inp>view text{
+  color: black;
+  line-height: 40px;
+}
+.inp>view input{
+  display: block;
+  position: absolute;
+  left: 15%;
+  color: black;
+  font-size: 1rem;
+  line-height: 40px;
+  height: 40px;
+  outline: none;
+  border: none;
+  top: 0;
+}
+.check{
+  padding: 3% 0;
+}
+.check>text{color: #8b8b8b;font-size: 0.7rem;}
+.check>text text{color: #4573c0;font-size: 0.7rem;}
+.check checkbox{width: 30px;height: 30px;}
+.btn,.back{font-size: 0.9rem;color: white;background: #ec5248;}
+
+.hy_detail,.hy_shuoMing{
+  padding: 0% 3%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: white;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.phone{color: #263e78 !important;}
+.hy_detail>text{
+  display: block;
+  color: black;
+  line-height: 2.5rem;
+  text-align: left;
+  border-bottom: 1px solid #d9d9d9;
+  box-sizing: border-box;
+}
+.hy_detail>view{padding-top: 3%;}
+.hy_detail>view text{
+  color: #989898;
+  display: block;
+  line-height: 1.4rem;
+  text-align: left;
+  margin-bottom: 1%;
+}
+.hy_detail>view text text{
+  text-align: left;
+  display: inline-block;
+  line-height: 1.4rem;
+  color: black;
+  margin-left: 10%;
+}
+.kong{
+  margin-left: 8% !important;
+}
+
+.hy_shuoMing text{
+  color: black;
+  line-height: 1rem;
+  margin-bottom: 5%;
+  display: block;
+  text-align: left;
+}
+.hy_shuoMing text:nth-of-type(1){font-size: 1rem;margin-top: 5%;}
+
+
+@media only screen and (min-width: 100px) and (max-width: 340px) {
+  .top{height: 70px;}
+}

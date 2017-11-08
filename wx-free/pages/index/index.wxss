@@ -1,0 +1,2 @@
+/**index.wxss**/
+.myImg{width: 80%;display: block;margin: 5% auto}

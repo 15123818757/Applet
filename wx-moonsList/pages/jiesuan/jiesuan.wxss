@@ -1,0 +1,108 @@
+/* pages/jiesuan/jiesuan.wxss */
+.address{
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  background: white;
+}
+.address>view text{
+  font-size: 1rem;
+  color: black;
+  padding: 0 15px;
+  line-height: 1rem;
+}
+.address>view text:nth-of-type(2){
+  color: #999999;
+  font-size: 0.7rem;
+}
+.address>text{
+  display: block;
+  text-align: left;
+  color: #999999;
+  font-size: 0.8rem;
+  overflow: hidden;
+  width: 80%;
+  height:18px;
+  line-height: 1rem;
+  margin-top: 10px;
+}
+.address>image{
+  display: block;
+  width: 10px;
+  height: 15.4px;
+  position: absolute;
+  right: 15px;
+  top: 33px;
+}
+.goodsInfo{
+  padding: 15px;
+  box-sizing: border-box;
+  background: white;
+  padding-bottom: 0;
+}
+.goodsInfo>view image{
+  display: inline-block;
+  width: 50px;
+  height: 66.5px;
+  margin: 0 3%;
+}
+.goodsInfo>view{
+  width: 100%;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 3%;
+}
+.num{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+.info{
+  width: 75%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+  height: 70px;
+  position: relative;
+}
+.info text{
+  text-align: left;
+  display: block;
+  color: black;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.info>view{position: absolute;bottom: 0;left: 0;text-align: right;width: 100%;}
+.info>view text{font-size: 0.8rem;color: #666666;display: inline-block;}
+.info>view text:nth-of-type(2){color: #fcb01d;}
+.box{margin-top: 1%;} 
+.price{
+  background: white;
+  padding: 5% 0;
+  box-sizing: border-box;
+}
+button{
+  width: 90%;
+  margin: 3% auto;
+  color: white;
+  font-size: 1rem;
+  font-family: "微软雅黑";
+}
+.hover-class{color: white;}
+button:nth-of-type(1){background: #ed5249;margin-top: 8%;}
+button:nth-of-type(2){background: #ef4f1d;}
+.checkGrop{
+  display: inline-block;
+  line-height: 40px;
+}
+.ss{margin-top: 0;border-top: 0;}
+
+@media only screen and (min-width: 100px) and (max-width: 340px) {
+  .goodsInfo>image{width: 55px;height: 73px;}
+  /* .peisong{height: 30px;} */
+}

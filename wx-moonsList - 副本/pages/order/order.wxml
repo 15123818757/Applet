@@ -1,0 +1,60 @@
+<!-- 订单编号 -->
+<view class="peisong" id="orderId">
+  <text>订单编号:200135226</text>
+  <text>等待支付</text>
+  <view></view>
+</view>
+<!-- 购买商品信息 -->
+<view class="goodsInfo">
+  <view>
+    <image src="../img/cartImg1.jpg"></image>
+    <view class="info">
+      <text>GatFit舒适背部挖剪直筒背心</text>
+      <text>￥318</text>
+      <text>款号：175/88A(XS)</text>
+    </view>
+    <text class="num">x1</text>
+  </view>
+  <view>
+    <text>共1件商品</text>
+    <text>小计:￥318元</text>
+  </view>
+</view>
+
+<!-- 地址 -->
+<view class="address">
+  <view>
+    <text>张三</text>
+    <text>15123818757</text>
+  </view>
+  <text>上海市普陀区金沙江路圣诺亚大厦A座510室</text>
+</view>
+
+<!-- 配送方式 -->
+<view class="peisong">
+  <text>配送方式</text>
+  <text>商家配送</text>
+</view>
+
+<!-- 价格 -->
+<view class="lastPrice">
+  <view>
+    <text>商品总额</text>
+    <text>￥318.00</text>
+  </view>
+  <view>
+    <text>优<text></text>惠</text>
+    <text>-￥95.40</text>
+  </view>
+  <view>
+    <text>运<text></text>费</text>
+    <text>+￥0.00</text>
+  </view>
+  <view></view>
+  <view>实付款<text>￥222.6</text></view>
+</view>
+
+
+<!-- 按钮 -->
+<button hover-class="hover-class">继续支付</button>
+<button hover-class="hover-class" bindtap="back">继续订单</button>

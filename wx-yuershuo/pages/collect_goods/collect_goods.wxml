@@ -1,0 +1,22 @@
+<!--pages/list/list.wxml-->
+<view class="content">
+  <view id="1" class="box" bindtap="detail"style="display:{{dis1}};">
+    <image src="../img/img6.jpg"></image>
+    <view>
+      <text>伊威原味珍珠粉</text>
+      <text>产品规格：250克</text>
+      <text>保质期：12个月</text>
+    </view>
+    <view class="del" data-index="1" catchtap="del">删除</view>
+  </view>
+  <view id="2" class="box" bindtap="detail"style="display:{{dis2}};">
+    <image src="../img/img6.jpg"></image>
+    <view>
+      <text>伊威猪肝红枣营养米粉  </text>
+      <text>产品规格：260克</text>
+      <text>保质期：24个月</text>
+    </view>
+    <view class="del" data-index="2" catchtap="del">删除</view>
+  </view>
+  <text>加载更多</text>
+</view>

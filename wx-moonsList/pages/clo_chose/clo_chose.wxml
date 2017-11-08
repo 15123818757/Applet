@@ -1,0 +1,40 @@
+<!--pages/clo_chose/clo_chose.wxml-->
+<!-- 内容 -->
+<view class="content">
+  <view class="box" bindtap="goDetail">
+    <image mode='widthFix' src="../img/chose_1.jpg"></image>
+    <text>抓绒衬里衍缝直筒夹克</text>
+    <view>
+      <text>￥198.00</text>
+      <image mode='widthFix' src='../img/cart.png'></image>
+    </view>
+  </view>
+  <view class="box">
+    <image mode='widthFix' src="../img/chose_2.jpg"></image>
+    <text>抓绒衬里衍缝直筒夹克抓绒衬里衍缝直筒夹克</text>
+    <view>
+      <text>￥198.00</text>
+      <image mode='widthFix' src='../img/cart.png'></image>
+    </view>
+    <view></view>
+  </view>
+  <view class="box">
+    <image mode='widthFix' src="../img/chose_3.jpg"></image>
+    <text>抓绒衬里衍缝克</text>
+    <view>
+      <text>￥198.00</text>
+      <image mode='widthFix' src='../img/cart.png'></image>
+    </view>
+    <view></view>
+  </view>
+  <view class="box">
+    <image mode='widthFix' src="../img/chose_4.jpg"></image>
+    <text>抓绒衬里衍缝直筒夹克</text>
+    <view>
+      <text>￥198.00</text>
+      <image mode='widthFix' src='../img/cart.png'></image>
+    </view>
+    <view></view>
+  </view>
+  <text>加载更多</text>
+</view>

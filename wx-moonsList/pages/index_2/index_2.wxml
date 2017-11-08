@@ -1,0 +1,59 @@
+<!-- banner -->
+<swiper class="banner" autoplay="true" indicator-dots="true">
+  <block>
+    <swiper-item>
+      <image src="../img/banner.jpg"></image>
+    </swiper-item>
+     <swiper-item>
+      <image src="../img/banner.jpg"></image>
+    </swiper-item>
+     <swiper-item>
+      <image src="../img/banner.jpg"></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 会员申请 -->
+<view class="loginAfter" style="display:{{afterDis}}">
+  <image src="../img/img2.jpg"></image>
+  <text>248031099261</text>
+  <view>
+    <text>会员等级：蓝卡会员</text>
+    <text>积分余额:80</text>
+  </view>
+</view>
+<!-- 九宫格 -->
+<view class="content">
+  <view bindtap="goCart">
+    <image src="../img/icon2.png"></image>
+    <text>购物袋</text>
+    <text>好东西收起来</text>
+  </view>
+  <view bindtap="goMyOrder">
+    <image src="../img/icon3.png"></image>
+    <text>订单查询</text>
+    <text>查找您的订单</text>
+  </view>
+  <view bindtap="goUser">
+    <image src="../img/icon4.png"></image>
+    <text>会员资料</text>
+    <text>修改资料赚积分</text>
+  </view>
+  <view>
+    <contact-button class="contact" size="27"></contact-button>
+    <image src="../img/icon6.png"></image>
+    <text>联系客服</text>
+    <text>有疑问找客服</text>
+  </view>
+  <view bindtap='update'>
+    <image src="../img/icon13.png"></image>
+    <text>修改密码</text>
+    <text>安全保障</text>
+  </view>
+  <view>
+    <image src="../img/icon12.png"></image>
+    <text>退出</text>
+    <text>离开商城</text>
+  </view>
+</view>
+

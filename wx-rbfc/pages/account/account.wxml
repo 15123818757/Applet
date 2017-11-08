@@ -1,0 +1,24 @@
+<!--pages/account/account.wxml-->
+<view class="header">
+    <image src="{{img}}"></image>
+    <text>{{name}}</text>
+</view>
+
+<!-- 导航 -->
+<view class="nav">
+    <view bindtap="goEdit">
+        <image src="../../img/iconImg1.png"></image>
+        <text>个人资料</text>
+        <image src="../../img/iconImg3.png"></image>
+    </view>
+    <view bindtap="goCollect">
+        <image src="../../img/iconImg2.png"></image>
+        <text>我的收藏</text>
+        <image src="../../img/iconImg3.png"></image>
+    </view>
+</view>
+<!-- 支持 -->
+<view class="bot">
+  <text>微运作提供技术支持</text>
+  <text>www.weiyunzuo.com</text>
+</view>

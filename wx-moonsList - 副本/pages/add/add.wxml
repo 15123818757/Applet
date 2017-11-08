@@ -1,0 +1,6 @@
+<!--pages/add/add.wxml-->
+<view class='box'>
+  <image bindtap='choseImg' src='{{imgSrc}}'></image>
+  <button bindtap='sub'>确认上传</button>
+  <button bindtap='cancel'>取消上传</button>
+</view>

@@ -1,0 +1,52 @@
+  <view class="citiBigBox">
+
+
+
+          <view data-index="2" wx:for="{{all}}" wx:for-item="i" class="cityBox" bindtouchstart="touchStart" bindtouchend="touchEnd" bindtouchmove="touchMove" style="margin-left:{{cityPos2}}px;display:{{cityDis2}}">
+             <image src="https://jphouse.wechatapp.net{{i.logo}}"></image>
+             <view bindtap="goHouseInfo"  data-tidd="{{i.id}}">
+                 <text>{{i.title}}</text>
+                <text>{{i.title2}}</text>
+ <view>
+                    <text>{{i.huxing}}</text>
+                <text>{{i.mianji}}㎡ </text>
+                </view>
+                <text>￥{{i.jiage}}万日元</text>
+           </view>
+           <view data-id="{{i.id}}" bindtap="botClick">咨询房源</view>
+             <view class="del"  data-tidd="{{i.id}}"bindtap="del">删除</view>
+      </view>
+   </view>
+
+
+
+   <!-- 咨询块 -->
+<view class="zxView" style="display:{{zxViewDis}}" bindtap="zxClick" >
+  <view>
+      <view bindtap="call">电话咨询</view>
+      <view bindtap="showMessage">在线留言</view>
+      <view catchtap="showEr">微信专家</view>
+      <view bindtap="goMeeting">参加相谈会</view>
+  </view>
+</view>
+
+<!-- 二维码 -->
+<view class="er" style="display:{{erDis}}">
+  <view>
+      <view>
+         <image src="https://jphouse.wechatapp.net/{{jichu.logo}}"></image>
+      </view>
+      <view>
+         <text>{{jichu.chenghao}}（{{jichu.name}}）</text>
+        <image src="../../img/topLogo2.jpg"></image>
+         <text>{{jichu.guojia}}</text>
+      </view>
+  </view>
+  <image src="https://jphouse.wechatapp.net/{{jichu.erweima}}"></image>
+  <text>微信账号：{{jichu.weixinhao}}</text>
+  <text>（请截取屏幕二维码，扫描并关注）</text>
+  <view><image bindtap="closeEr" src="../../img/close.png"></image></view>
+</view>
+
+<!-- 没有收藏的时候 -->
+<view style="display:{{collDis}}" class="noneCollect">暂无收藏</view>

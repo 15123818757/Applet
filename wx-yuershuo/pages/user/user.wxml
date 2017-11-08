@@ -1,0 +1,24 @@
+<!--pages/user/user.wxml-->
+<!-- 头 -->
+<view class="top">
+  <image src="../img/userLogo.jpg"></image>
+  <text>懒妈妈育儿说</text>
+</view>
+<!-- 收藏 -->
+<view class="collect">
+  <view class="box" bindtap="collect">
+    <image src="../img/icon9.png"></image>
+    <text>文章收藏</text>
+    <image src="../img/go.png"></image>
+  </view>
+  <view class="box" bindtap="goods">
+    <image src="../img/icon10.png"></image>
+    <text>产品收藏</text>
+    <image src="../img/go.png"></image>
+  </view>
+  <!-- 技术支持 -->
+  <view class="bot">
+    <text>微运作提供技术支持</text>
+    <text>WWW.WEIYUNZUO.COM</text>
+  </view>
+</view>

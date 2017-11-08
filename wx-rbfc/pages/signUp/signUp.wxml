@@ -1,0 +1,33 @@
+<!--pages/signUp/signUp.wxml-->
+<view class="header"><image bindtap="goBack" src="../../img/back.png"></image>在线报名</view>
+
+<!-- 表单 -->
+<form report-submit="true" bindsubmit="formBindsubmit" bindreset="formReset">
+  <text>姓名</text>
+  <input type="text" name="name" placeholder="请输入您的名字" value="{{all.name}}" />
+  <text>电话</text>
+  <input type="number" name="tel" placeholder="请输入您的电话" value="{{all.phone}}" />
+  <text>参加人数</text>
+  <input type="number" name="num" placeholder="请输入参加人数" />
+  <text>时间</text>
+  <radio-group name="time">
+    <view>
+      <radio color="#327ceb" value="{{allr.riqi1}}" checked="false" />{{allr.riqi1}}
+    </view>
+    <view>
+      <radio color="#327ceb" value="{{allr.riqi2}}" checked="false" />{{allr.riqi2}}
+    </view>
+  </radio-group>
+  <input type="number" name="time_detail" placeholder="请填写时间 例：10点" />
+
+
+  <view style="height:40px"></view>
+  <button class="sub" formType="submit">提交信息</button>  
+</form>
+<!-- 收藏 -->
+<view class="box" style="display:{{collDis}}">
+  <view style="top:{{c_ViewTop}}">
+    <text>{{tips}}</text>
+    <text bindtap="hideColl">确定</text>
+  </view>
+</view>

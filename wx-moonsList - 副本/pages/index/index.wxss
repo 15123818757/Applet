@@ -1,0 +1,110 @@
+/* pages/onlineShop/onlineShop.wxss */
+.nav{
+  background: white;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  border-bottom: 1px solid #cccccc;
+}
+.nav>view{padding: 3%;flex: 1;}
+.nav>view image{display: block;width: 32px;height: 32px;margin: auto;}
+.nav>view text{
+  display: block;
+  text-align: center;
+  color: #939393;
+  line-height: 1rem;
+}
+
+.banner{height: 180px;margin-top: -1%;}
+.banner image{height: 180px;}
+
+.search{background: white;padding: 4% 3%;}
+.search>view{
+  width: 100%;
+  position: relative;
+  height: 40px;
+   background: #f3f3f3; 
+}
+.search>view input{
+  display: block;
+  width: 90%;
+  outline: none;
+  border: none;
+  line-height: 40px;
+  color: #434343;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  padding-left: 3%;
+  font-family: "微软雅黑";
+  height: 40px;
+}
+.pClass{font-size: 0.9rem;color: #c3c3c3;font-family: "微软雅黑";line-height: 40px;}
+.search>view image{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  z-index: 10;
+}
+.content{box-sizing: border-box;text-align: center;background: white;margin-top: 3%;padding-top: 5%;}
+.content>view:last-child{padding-bottom: 3%;}
+.boxTile text{
+  display: block;
+  color: #5c5c5c;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.boxTile view{width: 10%;height: 2px;background: #a887fd;margin: 2% auto; }
+.scroll{
+  margin: 3% 0;
+  padding-left: 3%;
+  padding-right: 3%;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+}
+.goodsBox{
+  display: inline-block;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px lightgray;
+  width: 250px;
+  margin:  5px;
+  margin-right: 5%;
+  padding: 3%;
+}
+.goodsBox>view image{
+  width: 150px;
+  height: 150px;
+}
+.goodsBox>view view{display: inline-block;vertical-align: top;width: 75px;}
+.goodsBox>view view image{
+  display: block;
+  width: 75px;
+  height: 75px;
+}
+.goodsBox>text{
+  display: block;
+  text-align: left;
+  font-size: 0.8rem;
+  color: #454545;
+  margin: 1% 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.goodsBox>view:nth-of-type(2) text{color: #acacac;font-size: 0.7rem;}
+.goodsBox>view:nth-of-type(2) text:nth-of-type(2){float: right;padding-right: 5%;color: #fcac09;font-weight: bold;font-size: 0.9rem;}
+
+@media only screen and (min-width: 100px) and (max-width: 340px) {
+  .banner{height: 160px;}
+  .banner image{height: 160px;}
+  
+}
+@media only screen and (min-width: 370px) and (max-width: 420px) {
+  .banner{height: 190px;}
+  .banner image{height: 190px;}
+}

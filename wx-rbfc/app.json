@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/account/account",
+    "pages/meeting/meeting",
+    "pages/houseInfo/houseInfo",
+    "pages/collect/collect",
+    "pages/editInfo/editInfo",
+    "pages/message/message",
+    "pages/signUp/signUp"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#327ceb",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "日本房产精选",
+    "backgroundColor": "white",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#327ceb",
+    "borderStyle": "#e5e5e5",
+    "color": "#646464",
+    "list": [{
+          "pagePath": "pages/index/index",
+          "text": "精选房源",
+          "iconPath": "img/bottomImg1.png",
+          "selectedIconPath": "img/bottomImgColor1.png"
+        },{
+          "pagePath": "pages/meeting/meeting",
+          "text": "相谈会",
+          "iconPath": "img/bottomImg2.png",
+          "selectedIconPath": "img/bottomImgColor2.png"
+        },
+        {
+          "pagePath": "pages/account/account",
+          "text": "我的账户",
+          "iconPath": "img/bottomImg3.png",
+          "selectedIconPath": "img/bottomImgColor3.png"
+        }
+    ]
+  }
+}

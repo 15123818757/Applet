@@ -1,0 +1,14 @@
+/**app.wxss**/
+page{background: #f0f0f2;}
+view,text{font-family: "微软雅黑";font-size: 0.8rem;box-sizing: border-box;}
+text{text-align: center;}
+.banner image{width: 100%;height: 210px;}
+.top{width: 100%;height: 65px;}
+
+@media only screen and (min-width: 100px) and (max-width: 340px) {
+	.top{height: 60px;}
+}
+@media only screen and (min-width:370px) and (max-width: 420px) {
+  .top{height: 70px;}
+  .banner image{width: 100%;height: 190px;}
+}

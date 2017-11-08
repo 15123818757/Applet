@@ -1,0 +1,31 @@
+<!--pages/editInfo/editInfo.wxml-->
+<!-- 头部 -->
+<view class="header">
+  <image bindtap="goBack" src="../../img/back.png"></image>编辑个人资料
+</view>
+
+<!-- 表单 -->
+<form bindsubmit="formBindsubmit" bindreset="formReset">
+  <text>姓名</text>
+  <input type="text" name="name" value="{{user.name}}" placeholder="请输入您的名字" />
+  <text>电话</text>
+  <input type="number" name="tel" value="{{user.phone}}" placeholder="请输入您的电话" />
+  <text>年龄</text>
+  <input type="number" name="age" value="{{user.age}}" placeholder="请输入您的年龄" />
+  <text>性别</text>
+  <radio-group bindchange="listenerRadioGroup" name="sex">
+    <radio color="#327ceb" value="1" checked="{{order}}" />男
+    <radio color="#327ceb" value="2" checked="{{order2}}" />女
+  </radio-group>
+  <view style="height:40px"></view>
+  <button class="sub" formType="submit">提交信息</button>  
+</form>
+
+
+<!-- 收藏 -->
+<view class="box" style="display:{{collDis}}">
+  <view style="top:{{c_ViewTop}}">
+    <text>{{tips}}</text>
+    <text bindtap="hideColl">确定</text>
+  </view>
+</view>

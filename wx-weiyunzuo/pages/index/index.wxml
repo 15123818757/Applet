@@ -1,0 +1,575 @@
+<!--index.wxml-->
+<!-- 加载页面 -->
+<!-- <view class="load" style="width:100%; height:100%; background:#fff url(https://p.weiyunzuo.com/images/loading.gif) center center no-repeat; background-size:40px auto; position:fixed; top:0px; left:0px; z-index:99999;" hidden="{{loadHidden}}"></view> -->
+<!-- 主要内容 -->
+<view class="box {{boxTop}}"
+  bindtouchstart="mytouchstart"
+  bindtouchend="mytouchend" 
+  bindtouchmove="mytouchmove">
+    <!-- 轮播图 -->
+    <view class="num">
+        <swiper class="mySw"
+         indicator-dots="true"
+        autoplay="true" 
+        indicator-active-color="#b6262b"
+        circular="{{circular}}" 
+        interval="{{interval}}" 
+        duration="{{duration}}"
+        bindchange="swChange"
+        >
+        <block>
+            <swiper-item>
+                <view style="background:url({{banner_1_0}}) no-repeat center; background-size:100%;">
+                    <image
+                    style="-webkit-transform:translateX({{ban1_init}});transform:translateX({{ban1_init}});width:{{imgWidLogo}}px; height:{{imgHeiLogo}}px;"
+                     animation="{{banner1_ani1}}" bindload="imageLoad"
+                        class="m_logo"    src="{{banner_logo}}"> 
+                    </image>
+                    <text style="transform:translateX({{ban1_init}});" animation="{{banner1_ani2}}" class="m_grayFont">{{banner_1_1}}</text>
+                    <text style="transform:translateX({{ban1_init}});" animation="{{banner1_ani3}}" class="m_redFont">{{banner_1_2}}</text>
+                    <text style="transform:translateX({{ban1_init}});" animation="{{banner1_ani4}}" class="m_graySFont">{{banner_1_3}}</text>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view style="background:url({{banner_2_0}}) no-repeat center; background-size:100%;">
+                  <image animation="{{banner2_ani1}}" bindload="imageLoad" 
+                        style="width:{{imgWidLogo}}px; height:{{imgHeiLogo}}px;"
+                        class="m_logo"    src="{{banner_logo}}"> 
+                    </image>
+                    <text style="transform:translateX({{ban2_init}});" animation="{{banner2_ani2}}" class="m_grayFont">{{banner_2_1}}</text>
+                    <text style="transform:translateX({{ban2_init}});" animation="{{banner2_ani3}}" class="m_redFont">{{banner_2_2}}</text>
+                    <text style="transform:translateX({{ban2_init}});" animation="{{banner2_ani4}}" class="m_graySFont">{{banner_2_3}}</text>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view style="background:url({{banner_3_0}}) no-repeat center; background-size:100%;">
+                    <image animation="{{banner3_ani1}}" bindload="imageLoad" 
+                        style="width:{{imgWidLogo}}px; height:{{imgHeiLogo}}px;"
+                        class="m_logo"    src="{{banner_logo}}"> 
+                    </image>
+                    <text animation="{{banner3_ani2}}" style="transform:translateX({{ban3_init}});" class="m_grayFont">{{banner_3_1}}</text>
+                    <text animation="{{banner3_ani3}}" style="transform:translateX({{ban3_init}});" class="m_redFont">{{banner_3_2}}</text>
+                    <text animation="{{banner3_ani4}}" style="transform:translateX({{ban3_init}});" class="m_graySFont">{{banner_3_3}}</text>
+                </view>
+            </swiper-item>
+        </block>
+        </swiper>
+    </view>
+    <!-- 关于我们 -->
+    <view class="num">
+        <view class="video" style="height={{abVideoHei}}">
+            <video id="myVideo" autoplay="true" controls="{{controls}}" bindended="videoEnd" src="{{gvideo}}"></video>
+        </view>
+        <view class="about_textBox" style="height={{abViewHei}}"> 
+			<view class="textBox">
+				<image animation="{{aniNum2_1}}" style="width:{{imgWidLogo}}px; height:{{imgHeiLogo}}px;opacity:{{num2_1}};margin:{{x_abLogo}};" src="{{glogo}}" class="ab_img" bindload="imageLoad"></image>
+				<text animation="{{aniNum2_2}}" style="opacity:{{num2_2}};font-size:{{x_abText1_fontSize}};line-height:{{x_abText1_lineHeight}};" class="ab_redFont">{{gtitle_1}}</text>
+				<text animation="{{aniNum2_3}}" style="opacity:{{num2_3}};font-size:{{x_abText1_fontSize}};line-height:{{x_abText1_lineHeight}};" class="ab_redFont">{{gtitle_2}}   </text>
+				<text animation="{{aniNum2_4}}" style="opacity:{{num2_4}};font-size:{{x_abText1_fontSize}};line-height:{{x_abText1_lineHeight}};" class="ab_redFont">{{gtitle_3}}</text>
+				<text animation="{{aniNum2_5}}" style="opacity:{{num2_5}};font-size:{{x_abText2_fontSize}};margin-top:{{x_abText2_marginTop}}" class="ab_p">{{gcontent}}</text>
+			</view>
+		</view>
+    </view>
+    <!-- 服务项目 -->
+    <view class="num">
+        <view class="{{x_caseClass}}" animation="abAni1" bindtap="abTap" id="ab1"
+            style="transform:scale({{abScale1}})">
+            <image 
+                  class="{{abImgClass1}}"
+                  src="{{abImg1}}"
+                  bindload="serImgLoad" 
+                  style="width:{{serImgWid}}px; height:{{serImgHei}}px;
+            >
+            </image>
+            <text class="{{abText1}}">{{abnames1}}</text>
+            <text>{{abhtml1}}</text>
+        </view>
+        <view class="{{x_caseClass}}" animation="abAni2" bindtap="abTap" id="ab2"
+            style="transform:scale({{abScale2}})">
+            <image 
+                  class="{{abImgClass2}}"
+                  src="{{abImg2}}"
+                  bindload="serImgLoad" 
+                  style="width:{{serImgWid}}px; height:{{serImgHei}}px;
+            >
+            </image>
+            <text class="{{abText2}}">{{abnames2}}</text>
+            <text>{{abhtml2}}</text>
+        </view>
+        <view class="{{x_caseClass}}" animation="abAni3" bindtap="abTap" id="ab3"
+            style="transform:scale({{abScale3}})">
+            <image 
+                  class="{{abImgClass3}}"
+                  src="{{abImg3}}"
+                  bindload="serImgLoad" 
+                  style="width:{{serImgWid}}px; height:{{serImgHei}}px;
+            >
+            </image>
+            <text class="{{abText3}}">{{abnames3}}</text>
+            <text>{{abhtml3}}</text>
+        </view>
+        <view class="{{x_caseClass}}" animation="abAni4" bindtap="abTap" id="ab4"
+            style="transform:scale({{abScale4}})">
+            <image 
+                  class="{{abImgClass4}}"
+                  src="{{abImg4}}"
+                  bindload="serImgLoad" 
+                  style="width:{{serImgWid}}px; height:{{serImgHei}}px;
+            >
+            </image>
+            <text class="{{abText4}}">{{abnames4}}</text>
+            <text>{{abhtml4}}</text>
+        </view>
+        <view class="{{x_caseClass}}" animation="abAni5" bindtap="abTap" id="ab5"
+            style="transform:scale({{abScale5}})">
+            <image 
+                  class="{{abImgClass5}}"
+                  src="{{abImg5}}"           bindload="serImgLoad" 
+                  style="width:{{serImgWid}}px; height:{{serImgHei}}px;
+            >
+            </image>
+            <text class="{{abText5}}">{{abnames5}}</text>
+            <text>{{abhtml5}}</text>
+        </view>
+        <view class="{{x_caseClass}}" animation="abAni6" bindtap="abTap" id="ab6"
+            style="transform:scale({{abScale6}})">
+            <image 
+                  class="{{abImgClass6}}"
+                  src="{{abImg6}}"
+                  bindload="serImgLoad" 
+                  style="width:{{serImgWid}}px; height:{{serImgHei}}px;"
+            >
+            </image>
+            <text class="{{abText6}}">{{abnames6}}</text>
+            <text>{{abhtml6}}</text>
+        </view>
+        <view style="opacity:{{abOpt1}}" class="line line1"></view>
+        <view style="opacity:{{abOpt2}}" class="line line2"></view>
+        <view style="opacity:{{abOpt3}}" class="line3" ></view>
+    </view>
+
+
+    <!-- 案例 -->
+    <view class="num">
+        <!-- banner盒子 -->
+        <view class="serTopBox"> 
+            <!-- 地产 -->
+            <view class="topBox" style="display:{{serTopBox5}}">
+                <swiper 
+                current="{{current}}"
+                indicator-active-color="#b02537"
+                indicator-dots="true">
+                <block wx:for="{{an_cdata}}" 
+                wx:for-item="one" >
+                    <swiper-item class="{{x_cCaseClass}}">
+                        <view class="{{topClass5}}">
+                            <image 
+                            class="tBannerTopImg" 
+                            bindload="imageLoadSer3"
+                            style="width:{{serImgWid3}}px;height:{{serImgHei3}}px;
+                 src="https://p.weiyunzuo.com{{one.one}}">
+                            </image>
+                            <image 
+                            class="tBannerMidImg" 
+                            bindload="imageLoadSer2"
+                            bindtap="serClick2"
+                            data-tidd="{{one.url}}"
+                            style="width:{{serImgWid2}}px;height:{{serImgHei2}}px;
+                    src="https://p.weiyunzuo.com{{one.two}}">
+                            </image>
+                        </view>
+                    </swiper-item>
+                
+                </block>
+                </swiper>
+            </view>
+            
+        </view>
+
+        <!-- 选项盒子 -->
+        <view class="serBottomBox">
+            <!-- 向左 -->
+			<image id="goLeft" src="https://p.weiyunzuo.com/images/mobile/ser_left.png"
+            bindtap="goLeft"
+            >
+            </image>
+			<!-- 向右 -->
+			<image id="goRight" src="https://p.weiyunzuo.com/images/mobile/ser_right.png"
+            bindtap="goRight"
+            >
+            </image>
+            <!-- 内容 -->
+            <view class="serBoutBox">
+                <!-- 可以滑动的盒子 -->
+                <view class="serBInBox" style="left:{{serPosition}}px">
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass1}}"
+                            src="{{serImg1}}"
+                            id="ser1"
+                           data-tid="{{tid1}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText1}}">{{sertit1}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass2}}"
+                            src="{{serImg2}}"
+                            id="ser2"
+                            data-tid="{{tid2}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText2}}">{{sertit2}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass3}}"
+                            src="{{serImg3}}"
+                            id="ser3"
+                            data-tid="{{tid3}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText3}}">{{sertit3}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass4}}"
+                            src="{{serImg4}}"
+                            id="ser4"
+                            data-tid="{{tid4}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText4}}">{{sertit4}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass5}}"
+                            src="{{serImg5}}"
+                            id="ser5"
+                            data-tid="{{tid5}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText5}}">{{sertit5}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass6}}"
+                            src="{{serImg6}}"
+                            id="ser6"
+                            data-tid="{{tid6}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText6}}">{{sertit6}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass7}}"
+                            src="{{serImg7}}"
+                            id="ser7"
+                            data-tid="{{tid7}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText7}}">{{sertit7}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass8}}"
+                            src="{{serImg8}}"
+                            id="ser8"
+                            data-tid="{{tid8}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText8}}">{{sertit8}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass9}}"
+                            src="{{serImg9}}"
+                            id="ser9"
+                            data-tid="{{tid9}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText9}}">{{sertit9}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass10}}"
+                            src="{{serImg10}}"
+                            id="ser10"
+                            data-tid="{{tid10}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText10}}">{{sertit10}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass11}}"
+                            src="{{serImg11}}"
+                            id="ser11"
+                            data-tid="{{tid11}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText11}}">{{sertit11}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass12}}"
+                            src="{{serImg12}}"
+                            id="ser12"
+                            data-tid="{{tid12}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText12}}">{{sertit12}}</text>
+					</view>
+                    <view class="{{x_cCaseClass2}}">
+                        <image
+                            class="{{serImgClass13}}"
+                            src="{{serImg13}}"
+                            id="ser13"
+                            data-tid="{{tid13}}"
+                            bindtap="serClick"
+                        >
+                        </image>
+						<text class="{{serText13}}">{{sertit13}}</text>
+					</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+
+
+
+    <!-- 经典案例 -->
+    <view class="num">
+        <view class="caseOutDiv" style="margin-top:{{x_cTopBox}}">
+            <view class="{{x_ccClass}}" style="opacity:{{caseView1}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap"
+                 id="1"
+                 data-cid="{{cid1}}"
+                src="{{animg1}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView2}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" 
+                id="2"
+                data-cid="{{cid2}}"
+                src="{{animg2}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView3}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap"
+                id="3"
+                data-cid="{{cid3}}"
+                src="{{animg3}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView4}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap"
+                id="4"
+                data-cid="{{cid4}}"
+                src="{{animg4}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView5}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="5"data-cid="{{cid5}}"
+                src="{{animg5}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView6}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="6"data-cid="{{cid6}}"
+                src="{{animg6}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView7}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="7"data-cid="{{cid7}}"
+                src="{{animg7}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView8}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="8"data-cid="{{cid8}}"
+                src="{{animg8}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView9}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="9"data-cid="{{cid9}}"
+                src="{{animg9}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView10}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="10"data-cid="{{cid10}}"
+                src="{{animg10}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView11}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="11"data-cid="{{cid11}}"
+                src="{{animg11}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView12}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="12" data-cid="{{cid12}}"
+                src="{{animg12}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView13}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="13" data-cid="{{cid13}}"
+                src="{{animg13}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView14}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="14" data-cid="{{cid14}}"
+                src="{{animg14}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView15}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="15"data-cid="{{cid15}}"
+                src="{{animg15}}">
+                </image>
+			</view>
+            <view class="{{x_ccClass}}" style="opacity:{{caseView16}}">
+                <view></view>
+                <view></view>
+				<image class="caseImg" 
+                bindtap="caseTap" id="16"data-cid="{{cid16}}"
+                src="{{animg16}}">
+                </image>
+			</view>
+
+        </view>
+    </view>
+
+
+
+    
+    <!-- 联系我们 --> 
+    <view class="num">
+        <view class="con_topRed" style="top:{{con1}}"></view>
+        <image 
+             bindload="conImgLoad"
+            style="width:{{codeImgWid}}px; height:{{codeImgHei}}px;top:{{con2}}"
+            src="{{erweima}}" class="con_code"></image>
+        <text style="top:{{con3}}" class="con_font1">扫描二维码关注微运作</text>
+        <image
+            style="width:{{imgWidLogo}}px; height:{{imgHeiLogo}}px;left:{{con4}}"
+            bindload="imageLoad"
+            class="con_logo"
+            src="{{banner_logo}}"
+            > 
+        </image>
+        <view style="left:{{con5}}" class="con_font2">咨询热线：
+            <view bindtap="call">{{tel}}</view>
+        </view>
+        <view style="left:{{con6}}" class="con_font3">公司地址：{{address1}}</view>
+        <view style="left:{{con7}}" class="con_font4">{{address2}}</view>
+        <view style="left:{{con8}}" class="con_bottom" bindtap="">
+            <contact-button class="contact" size="27"></contact-button>
+            <image src="https://p.weiyunzuo.com/images/mobile/con_icon.png"
+            style="width:{{codeImgWid2}}px; height:{{codeImgHei2}}px;"
+            bindload="conImgLoad2"
+            >
+            </image>
+            立即咨询
+        </view>
+        <!-- 填写信息的表单 -->
+        <view class="con_moBox" style="height:{{con_height}}">
+            <!-- 提交完成 -->
+            <view class="tipView" hidden="{{tipHide}}">
+                <text>提交完成</text>
+                <button bindtap="tipTap">确定</button>
+            </view>
+
+			<view class="x_con" id="moveBox" style="top:{{moveBoxTop}}">
+                <view>
+                    <image bindtap="hidMo" id="del" src="https://p.weiyunzuo.com/images/icon/del.png">
+                    </image>
+                </view>
+                <text>把您的需求告诉我们，</text>
+				<text>让我们优秀的团队为您服务</text>
+                <form bindsubmit="formBind">
+                    <view class="inpView">
+                        <image src="https://p.weiyunzuo.com/images/icon/icon01.png"></image>
+                        <input name="username" placeholder-style="font-family: '微软雅黑';" 
+                        value="{{conName}}" placeholder-class='textClass'
+                        placeholder="请输入您的名字"/>
+                    </view>
+                    <view class="inpView">
+                        <image src="https://p.weiyunzuo.com/images/icon/icon02.png"></image>
+                        <input name="phone" 
+value="{{conIphone}}"  placeholder-class='textClass'                      placeholder-style="font-family: '微软雅黑';" placeholder="请输入您常用的联系方式"/>
+                    </view>
+                    <view class="inpTextAarea">
+                        <image src="https://p.weiyunzuo.com/images/icon/icon03.png"></image>
+                        <textarea name="xuqiu" 
+                        value="{{conRequest}}"   style="height:{{hideTextHeight}}" placeholder-class='textClass'
+                        placeholder="请输入您需求，以方便我们更好的为您服务..." />
+                    </view>
+               
+                <view class="moBDiv" id="moBDiv">
+				<button id="sub" form-type="submit">立即提交
+				</button>
+              
+                </view>
+                   </form>
+            </view>
+
+		</view>
+    </view>
+</view>
