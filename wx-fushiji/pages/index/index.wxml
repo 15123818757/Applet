@@ -1,0 +1,64 @@
+<!--index.wxml-->
+<!-- 搜索 -->
+<view class="search">
+  <view>
+    <input type="text" placeholder="搜索食材" placeholder-class="pClass" />
+    <image src="../img/search.png"></image>
+  </view>
+</view>
+<!-- <loading hidden="{{hiddenLoading}}">加载中</loading> -->
+<!-- 菜单 -->
+<view class="menu">
+  <view bindtap="goList">
+    <image src="../img/icon1.png"></image>
+    <text>泥糊</text>
+  </view>
+  <view>
+    <image src="../img/icon2.png"></image>
+    <text>米面</text>
+  </view>
+  <view>
+    <image src="../img/icon3.png"></image>
+    <text>菜肴</text>
+  </view>
+  <view>
+    <image src="../img/icon4.png"></image>
+    <text>点心</text>
+  </view>
+  <view>
+    <image src="../img/icon5.png"></image>
+    <text>蛋肉</text>
+  </view>
+  <view>
+    <image src="../img/icon6.png"></image>
+    <text>汤羹</text>
+  </view>
+</view>
+<!-- 年龄 -->
+<view class="box">
+    <view>
+      <image src="../img/icon7.png"></image>
+      <text>按年龄选辅食</text>
+    </view>
+    <view class="felxBox">
+      <text>6-9个月</text>
+      <text>10-12个月</text>
+      <text>1-2岁</text>
+      <text>2岁以上</text>
+    </view>
+</view>
+<!-- 功效 -->
+<view class="box">
+    <view>
+      <image src="../img/icon8.png"></image>
+      <text>按功效选辅食</text>
+    </view>
+    <view class="felxBox">
+      <text>补铁</text>
+      <text>补锌</text>
+      <text>补钙</text>
+      <text>益智</text>
+      <text>开胃</text>
+      <text>清火</text>
+    </view>
+</view>

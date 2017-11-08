@@ -1,0 +1,2 @@
+/**app.wxss**/
+text,view{font-size: 0.8rem;font-family: "微软雅黑";box-sizing: border-box;color: #434343;}

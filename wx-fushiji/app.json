@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/user/user",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/product/product",
+    "pages/collect/collect",
+    "pages/collect_goods/collect_goods"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ff6666",
+    "navigationBarTitleText": "萌宝宝辅食记",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "selectedColor": "#ff6666",
+    "borderStyle": "#e5e5e5",
+    "color": "#6c6c6c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/img/bIcon1.png",
+        "selectedIconPath": "pages/img/bIcon_S1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "pages/img/bIcon2.png",
+        "selectedIconPath": "pages/img/bIcon_S2.png"
+      }
+    ]
+  }
+}

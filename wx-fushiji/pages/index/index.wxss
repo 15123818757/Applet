@@ -1,0 +1,76 @@
+/**index.wxss**/
+.search{background: #ff6666;padding: 4% 3%;}
+.search>view{
+  background: white;
+  position: relative;
+  height: 40px;
+}
+.search>view input{
+  display: block;
+  width: 90%;
+  outline: none;
+  border: none;
+  background: white;
+  line-height: 40px;
+  color: #434343;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  padding-left: 3%;
+  font-family: "微软雅黑";
+  height: 40px;
+}
+.pClass{font-size: 0.9rem;color: #c3c3c3;font-family: "微软雅黑";line-height: 40px;}
+.search>view image{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  z-index: 10;
+}
+.menu{padding: 4% 3%;background: white;border-bottom: 1px solid #f1f1f1;margin-bottom:4%;}
+.menu>view{
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+  text-align: center;
+}
+.menu>view:nth-of-type(1){margin-bottom: 5%;}
+.menu>view image{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+.menu>view text{
+  display: block;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 5%;
+}
+.box{padding: 0% 3%;}
+.box>view:nth-of-type(1) image{
+  display: inline-block;
+  width: 18px;
+  height: 17px;
+  vertical-align: bottom;
+} 
+.box>view:nth-of-type(1) text{
+  font-size: 0.9rem;
+  padding-left: 3%;
+}
+.felxBox{
+  padding: 3%;
+}
+.felxBox>text{ 
+  display: inline-block;
+  width: 29%;
+  color: #ff6666;
+  border: 1px solid #ff6666;
+  padding: 2% 3%;
+  font-size: 0.8rem;
+  margin: 2% 2.1%;
+  text-align: center;
+}
+@media only screen and (max-width:325px){
+    .menu>view image{width: 45px;height: 45px;}
+}

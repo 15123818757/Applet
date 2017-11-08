@@ -1,0 +1,136 @@
+<!--pages/detail/detail.wxml-->
+<video class="video" src="http://ugcyd.qq.com/flv/62/61/h05685clcev.mp4?sdtfrom=v1010&guid=bfa0353e71e8ef52dfc219d41db85e65&vkey=DD6F9CAFDE9F93DF2BCBDD668D6BC4C8D3A1E7D8F18BF34E1B33339039C478671E6C1BDCD17527885DA1759713FC0B316B4CE421FECC0A500272C0189C77DA81CAA4D3EF9DA89CCD4C8CBE9B7B01648EBA3A6875B14E634456194B8C93AEFB697605053C5A1E8255D079F0206CB817E3931B4CDF7C190A9C" ></video>
+<!-- 没视频的图片 -->
+<image src='../img/img5.jpg' style='display:block' class='topImg'></image>
+
+<view class="content">
+  <!-- 标题 -->
+  <view class="title">
+    <view>奶油蛋糕，好吃不会胖#</view>
+    <view>
+      <text>我们都知道胡萝卜中含有大量的β-胡萝卜素，可以被人体吸收后转换成维生素A。胡萝卜素的吸收离不开油脂的参与，但对于添加辅食的小宝宝来说，用油炒显然不是做好的方法，所以胡萝卜是真的好吃。</text>
+      <text>我们都知道胡萝卜中含有大量的β-胡萝卜素，可以被人体吸收后转换成维生素A。胡萝卜素的吸收离不开油脂的参与，但对于添加辅食的小宝宝来说，用油炒显然不是做好的方法，所以胡萝卜是真的好吃。</text>
+    </view>
+  </view>
+  <!-- 材料 -->
+  <view class="stuff">
+    <view class="redTitle">
+      <view></view>
+      <text>食材/用料</text>
+      <view></view>
+    </view>
+    <view>
+      <view>
+        <text>面粉</text>
+        <text>250克</text>
+      </view>
+      <view>
+        <text>奶酪</text>
+        <text>10克</text>
+      </view>
+      <view>
+        <text>鸡蛋</text>
+        <text>5个</text>
+      </view>
+      <view>
+        <text>食用油</text>
+        <text>25克</text>
+      </view>
+    </view>
+  </view>
+  <!-- 步骤 -->
+  <view class="setp">
+    <view class="redTitle">
+      <view></view>
+      <text>步骤1</text>
+      <view></view>
+    </view>
+    <text>鹰嘴豆和银耳提前用清水泡发2个小时。鹰嘴豆泡的时间越长，煮起来才越容易熟。最好提前一天浸泡，天热的时候放入冰箱冷藏，避免变质。</text>
+    <view class="redTitle">
+      <view></view>
+      <text>步骤2</text>
+      <view></view>
+    </view>
+    <image src="../img/img5.jpg"></image>
+    <text>鹰嘴豆和银耳提前用清水泡发2个小时。鹰嘴豆泡的时间越长，煮起来才越容易熟。</text>
+  </view>
+  <!-- 相关产品 -->
+  <view class="product">
+    <view class="redTitle">
+      <view></view>
+      <text>相关产品</text>
+      <view></view>
+    </view>
+    <!-- 可滚动视图 -->
+     <scroll-view class="scroll" scroll-x="true">
+      <view class="proBox" bindtap="product">
+        <image src="../img/img6.jpg"></image>
+        <view>原味珍珠面</view>
+      </view>
+      <view class="proBox">
+        <image src="../img/img7.jpg"></image>
+        <view>猪肝红枣营养米粉</view>
+      </view>
+      <view class="proBox">
+        <image src="../img/img8.jpg"></image>
+        <view>淮山山药莲子营养米粉</view>
+      </view>
+      <view class="proBox">
+        <image src="../img/img6.jpg"></image>
+        <view>原味珍珠面</view>
+      </view>
+    </scroll-view> 
+  </view>
+  <!-- 评论 -->
+  <view class="pingL">
+    <view class="redTitle">
+      <view></view>
+      <text>评论</text>
+      <view></view>
+    </view>
+    <view class="plBox">
+      <image src="../img/userLogo.jpg"></image>
+      <view>
+        <text>张三</text>
+        <text>按照上面的步骤做出来的东西还不错，挺好吃！</text>
+      </view>
+      <text>2017年8月29日</text>
+    </view>
+    <view class="plBox">
+      <image src="../img/userLogo.jpg"></image>
+      <view>
+        <text>李四</text>
+        <text>按照上面的步骤做出来的东西还不错，挺好吃按照上面的步骤做出来的东西还不错，挺好吃！</text>
+      </view>
+      <text>2017年8月29日</text>
+    </view>
+    <text>加载更多</text>
+  </view>
+</view>
+
+<!-- 评论框 -->
+<view class="bigPL" style="display:{{PLDis}}" bindtap="hidePL">
+  <view>
+    <textarea catchtap="text" placeholder="请输入评论内容" placeholder-class="pClass"  /> 
+    <text catchtap="sub">提交</text>
+  </view>
+</view>
+
+
+<view class="hideView"></view>
+<!-- 底部 -->
+<view class="buttom">
+  <view bindtap="collect">
+    <image src="{{cImg}}"></image>
+    <text>{{cText}}</text>
+  </view>
+  <view bindtap="showPL">
+    <image src="../img/d_icon2.png"></image>
+    <text>评论</text>
+  </view>
+  <view>
+    <image src="../img/d_icon3.png"></image>
+    <text>分享</text>
+    <button open-type="share"></button>
+  </view>
+</view>

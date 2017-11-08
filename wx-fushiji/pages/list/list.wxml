@@ -1,0 +1,48 @@
+<!--pages/list/list.wxml-->
+<view class="content">
+  <view class="box" bindtap="goDetail">
+    <image src="../img/img1.jpg"></image>
+    <view>
+      <text>奶油蛋糕，好吃不会胖好吃不会胖好吃不会胖好吃不会胖</text>
+      <text>鲜奶油、花生豆、白砂糖、红糖、提拉米苏、杏仁、巧克力、抹茶白砂糖、红糖、提拉米苏、杏仁、巧克力、抹茶白砂糖、红糖、提拉米苏、杏仁、巧克力、抹茶白砂糖、红糖、提拉米苏、杏仁、巧克力、抹茶</text>
+      <view>
+        <image src="../img/pao.png"></image>12
+        <image src="../img/heart.png"></image>19
+      </view>
+    </view>
+  </view>
+  <view class="box">
+    <image src="../img/img2.jpg"></image>
+    <view>
+      <text>老上海炸鸡，就是那个味！</text>
+      <text>鲜奶油、花生豆、白砂糖</text>
+      <view>
+        <image src="../img/pao.png"></image>12
+        <image src="../img/heart.png"></image>19
+      </view>
+    </view>
+  </view>
+  <view class="box">
+    <image src="../img/img3.jpg"></image>
+    <view>
+      <text>#减肥套餐来了#</text>
+      <text>鲜奶油、花生豆、白砂糖</text>
+      <view>
+        <image src="../img/pao.png"></image>12
+        <image src="../img/heart.png"></image>19
+      </view>
+    </view>
+  </view>
+  <view class="box">
+    <image src="../img/img4.jpg"></image>
+    <view>
+      <text>手把手教你熬粥</text>
+      <text>鲜奶油、花生豆、白砂糖</text>
+      <view>
+        <image src="../img/pao.png"></image>12
+        <image src="../img/heart.png"></image>19
+      </view>
+    </view>
+  </view>
+  <text>加载更多</text>
+</view>
